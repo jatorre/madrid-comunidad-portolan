@@ -122,23 +122,38 @@ Published to **`gs://carto-portolan-madrid/comunidad-madrid/`** (one bucket, pre
 `…/madrid-city/`; bucket is `europe-southwest1`/Madrid and **already public**, `allUsers:objectViewer`).
 Endpoint: **`https://storage.googleapis.com/carto-portolan-madrid/comunidad-madrid`**.
 
-Per dataset, the canonical Portolan read paths (all anonymous, static, no server):
-- **Iceberg v3** (`data/v3/<id>`, native geometry EPSG:25830) → `ATTACH` / `iceberg_scan`,
-- **remote GeoParquet** (`data/parquet/<id>.parquet`) → `read_parquet` in place,
-- **STAC `catalog.json` + per-dataset `collection.json`** (git-tracked) with the **git-backed-catalog** and
-  **STAC-Iceberg** extensions,
-- **`catalog.datasets`** stac-geoparquet index + static **Iceberg-REST** surface (`v1/…`, prefix `sdi`).
+Per dataset, the canonical Portolan read paths (all anonymous, static, no server) — same published shape as the
+City catalog (`v1/` Iceberg-REST surface + `data/`, no top-level `catalog.json`/HTML):
+- **Iceberg v3** (`data/v3/<id>`, native geometry EPSG:25830) → `ATTACH` / `iceberg_scan` (vector); `tab.*` for tabular,
+- **remote GeoParquet/Parquet** (`data/parquet/<id>.parquet`, `data/parquet_tab/<id>.parquet`) → `read_parquet` in place,
+- **`catalog.datasets`** stac-geoparquet index (one row per dataset: id, theme, kind, bbox, semantics, assets),
+- static **Iceberg-REST** surface (`v1/…`, prefix `sdi`) — the `ATTACH` endpoint,
 - **Rasters** → COG asset on the bucket (`data/cog/<id>.tif`, `image/tiff; application=geotiff` cloud-optimized).
 
 `data_provider` = **Comunidad de Madrid**; `data_license` = **CC-BY-4.0** (attribution to Comunidad de Madrid).
 
-## 7. Scope & status (this build)
+## 7. Scope & status (PUBLISHED 2026-06-05)
 
-Priority order (highest-value distinct regional geodata first):
-1. **248 WFS vector layers → GeoParquet + Iceberg v3 + remote parquet** — the core regional cartography.
-2. **98 WCS raster coverages → COG** — the regional hazard/risk/vulnerability archive.
-3. **5 CKAN SHP datasets → GeoParquet** (health/COVID geospatial).
-4. **CKAN tabular (CSV → parquet, `tab.*`)** — 2,236 statistical tables; batch-ingested + scripted for the tail.
+**Live & verified** at `https://storage.googleapis.com/carto-portolan-madrid/comunidad-madrid` — anonymous
+`ATTACH` (2,481 Iceberg tables), `iceberg_scan`, `read_parquet`, and COG `/vsicurl/` all confirmed. ~8.3 GB.
 
-Build is **incremental**: the bucket + catalog go live early and grow as datasets are converted. Large WFS
-layers (>1M) and the full 2,282-table CKAN tail are processed last / scripted, and any skips are reported.
+| Kind | Published | Source | Representation |
+|---|---:|---|---|
+| **Vector** | **249** | 244 IDEM WFS thematic layers + 5 CKAN SHP | Iceberg `v3.*` (native EPSG:25830) + remote GeoParquet |
+| **Raster** | **97** | IDEM WCS coverages (hazard/risk/vulnerability + PV) | Cloud-Optimized GeoTIFF `data/cog/<id>.tif` |
+| **Tabular** | **2,232** | CKAN CSV (statistics) | Iceberg `tab.*` + remote Parquet |
+| **Total** | **2,578** | | + `catalog.datasets` stac-geoparquet index + Iceberg-REST surface |
+
+**Deliberately deferred / skipped (5 of 248 WFS, 1 of 98 WCS, 4 of 2,236 CSV):**
+- **4 WFS base-topography giants (>1M features)** — `IDEM_BTA_EDIPOBCONS_LIN_17` (3.13M),
+  `IDEM_BTA_10M_EDIPOBCONS_LIN_11` (2.99M), `IDEM_BTA_REDVIARIA_LIN_17` (1.52M),
+  `IDEM_BTA_10M_REDVIARIA_LIN_11` (1.35M). The server has **no `startIndex` paging** (no primary key →
+  "Cannot do natural order"), so each needs a single multi-GB GeoJSON fetch; deferred on disk/time grounds.
+  They are base cartography (lowest thematic distinctiveness) and remain available via WFS for a later pass.
+- **1 WCS coverage** — `ZonasRiesgo__Vulnerabilidad_Territorial_IIFF_R` returns a 497-byte error
+  (broken server-side coverage); all 97 others converted.
+- **4 CKAN CSVs** — 3 are genuinely empty (0 bytes); 1 (`atencion_social_registro_servicios`) is malformed
+  beyond the CP1252/latin-1 transcode fallback. 2,232 of 2,236 ingested (99.8%).
+
+Build is **incremental & resumable** — re-running `build_catalog.py` + `upload.py` republishes the index +
+surface over whatever has been converted; `gcloud storage rsync` only ships changed bytes.

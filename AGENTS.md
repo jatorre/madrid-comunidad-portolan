@@ -17,7 +17,7 @@ Endpoint = `public_base` in `portolan.config.json`:
 - **Scan a table directly (DuckDB):** `iceberg_scan('<public_base>/data/v3/<id>/metadata/v1.metadata.json')`
 - **Direct download:** GeoParquet at `<public_base>/data/parquet/<id>.parquet` (`read_parquet`).
 - **Rasters:** Cloud-Optimized GeoTIFF at `<public_base>/data/cog/<id>.tif` (`/vsicurl/`, rasterio, GDAL).
-- **Discover:** STAC `catalog.json` + per-dataset `<id>/collection.json`; `catalog.datasets` stac-geoparquet index; `index.html`.
+- **Discover:** the `catalog.datasets` **stac-geoparquet index** — one row per dataset (id, theme, kind, bbox, semantics, assets). `iceberg_scan('<public_base>/data/catalog/datasets/metadata/v1.metadata.json')` or `SELECT * FROM cat.catalog.datasets`.
 
 Geometry is native `GEOMETRY(EPSG:25830)` in `v3.*` tables and in the remote GeoParquet (`geom` column + `bbox`).
 DuckDB distance queries run in **metres** with no `ST_Transform`. Tabular (non-geo) datasets are `tab.*`

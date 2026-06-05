@@ -69,6 +69,8 @@ def convert_one(r):
     tn=r["name"]; did=r["id"]; want=r["count"]
     out=f"{OUTDIR}/{did}.parquet"
     if os.path.exists(out) and parquet_rows(out)==want:
+        save_manifest_entry({"id":did,"typename":tn,"title":r["title"],"theme":r["ws"],
+            "crs":SRSREQ,"rows":want,"want":want,"type":"vector","src":f"{did}.parquet"})
         return did,"skip",want
     gj=f"{GEOJDIR}/{did}.geojson"
     try:

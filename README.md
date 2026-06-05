@@ -39,17 +39,21 @@ Rasters: `/vsicurl/https://storage.googleapis.com/carto-portolan-madrid/comunida
 See **`COMUNIDAD_INVENTORY.md`** for the full investigation, counts, dedup-vs-City notes, and conversion recipe,
 and **`AGENTS.md`** for how to read/contribute.
 
-## Layout
+## What's published
+
+**2,578 datasets** (249 vector + 97 raster COGs + 2,232 tabular + the index), ~8.3 GB, native EPSG:25830,
+CC-BY-4.0. Published as a static **Iceberg-REST surface** (`v1/…`) + `data/` trees — the same shape as the
+City catalog (no server, no top-level `catalog.json`/HTML). Discovery is the `catalog.datasets` stac-geoparquet
+index. See `COMUNIDAD_INVENTORY.md` §7 for the full breakdown and the handful of documented skips.
+
+## Layout (git repo = definition)
 
 ```
 portolan.config.json          publisher + bucket config (the only per-repo config)
-COMUNIDAD_INVENTORY.md         source investigation + conversion recipe
-catalog.json                   STAC catalog (git-backed-catalog extension) — GENERATED
-<id>/collection.json           per-dataset STAC Collection (+ STAC-Iceberg extension) — GENERATED
-data/**/metadata/              Iceberg metadata — IN GIT (points at parquet by bucket URL)
-data/**/*.parquet, data/cog/*  data bytes — ON THE BUCKET ONLY (git-ignored)
-tools/                         build/publish/validate + inventory references
-.github/workflows/             publish (on merge) + validate (on PR)
+COMUNIDAD_INVENTORY.md         source investigation + conversion recipe + published status
+tools/                         the reproducible build pipeline (see tools/README.md) + inventory references
+.github/workflows/validate.yml lints JSON + checks the live endpoint (no credentials)
+                              # data bytes (parquet / COG) live ON THE BUCKET ONLY (git-ignored)
 ```
 
 ## Principles (don't regress)
