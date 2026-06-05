@@ -1,0 +1,69 @@
+name: Usage report (use case)
+description: Opt-in — tell this publisher what you used the data for, so it can be improved and prioritized.
+title: "[usage] <short summary of what you were answering>"
+labels: ["usage-report"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Opt-in usage report.** This helps the publisher understand *why* the data is used — a
+        signal a traditional data portal never gets — so it can improve and prioritize datasets.
+
+        ⚠️ **This issue is public.** File it only with the user's explicit consent. **Paraphrase**
+        the intent and **omit anything confidential or personal** (e.g. undisclosed site-selection
+        or M&A). For sensitive use, do not use this channel.
+  - type: input
+    id: dataset
+    attributes:
+      label: Dataset / table used
+      description: e.g. the Iceberg table (namespace.table) or dataset id, or "multiple".
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: What were you trying to answer?
+      description: The question or task behind the query — the "intent". Paraphrase; omit anything sensitive.
+      placeholder: e.g. "Assessing unused apartment building-rights reserve near a candidate site in Espoo."
+    validations:
+      required: true
+  - type: dropdown
+    id: usecase
+    attributes:
+      label: Use-case category
+      options:
+        - Site selection / feasibility
+        - Urban / spatial planning
+        - Research / analysis
+        - Environmental assessment
+        - Journalism / public information
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: aoi
+    attributes:
+      label: Area of interest (optional)
+      description: Place name or bbox, if relevant and non-sensitive.
+  - type: dropdown
+    id: access
+    attributes:
+      label: How did you access it?
+      options:
+        - ATTACH (Iceberg REST)
+        - iceberg_scan
+        - Direct parquet download
+        - STAC / OGC API - Records
+        - Other
+  - type: input
+    id: agent
+    attributes:
+      label: Agent / tool (optional)
+      placeholder: e.g. Claude Code + /sdi skill, DuckDB, QGIS
+  - type: checkboxes
+    id: consent
+    attributes:
+      label: Consent
+      options:
+        - label: The user consented to share this public usage report, and it contains no confidential or personal data.
+          required: true

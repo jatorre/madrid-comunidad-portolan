@@ -1,0 +1,394 @@
+[
+ {
+  "id": "RecursosEnergeticos__Indice_Capacidad_Acogida_FTV",
+  "title": "Capacidad de acogida para plantas fotovoltaicas Raster"
+ },
+ {
+  "id": "ZonasRiesgo__peligrosid_3_1",
+  "title": "Peligrosidad por incendios forestales"
+ },
+ {
+  "id": "ZonasRiesgo__riesgo_6_11",
+  "title": "Riesgo por Accidentes en centrales energéticas"
+ },
+ {
+  "id": "ZonasRiesgo__riesgo_6_17",
+  "title": "Riesgo por Accidentes en túneles"
+ },
+ {
+  "id": "ZonasRiesgo__riesgo_6_3",
+  "title": "Riesgo por Accidentes industriales: nube tóxica"
+ },
+ {
+  "id": "ZonasRiesgo__riesgo_6_5",
+  "title": "Riesgo por Accidentes industriales: radiación"
+ },
+ {
+  "id": "ZonasRiesgo__riesgo_6_4",
+  "title": "Riesgo por Accidentes industriales: sobrepresión"
+ },
+ {
+  "id": "ZonasRiesgo__riesgo_6_20",
+  "title": "Riesgo por Actividades deportivas"
+ },
+ {
+  "id": "ZonasRiesgo__riesgo_6_6",
+  "title": "Riesgo por Actividades extractivas"
+ },
+ {
+  "id": "ZonasRiesgo__riesgo_5_2",
+  "title": "Riesgo por Aludes"
+ },
+ {
+  "id": "ZonasRiesgo__riesgo_2_1",
+  "title": "Riesgo por Avenidas y Crecidas"
+ },
+ {
+  "id": "ZonasRiesgo__riesgo_6_18",
+  "title": "Riesgo por Concentraciones humanas"
+ },
+ {
+  "id": "ZonasRiesgo__riesgo_6_8",
+  "title": "Riesgo por Contaminación ambiental del agua"
+ },
+ {
+  "id": "ZonasRiesgo__riesgo_6_7",
+  "title": "Riesgo por Contaminación ambiental del aire"
+ },
+ {
+  "id": "ZonasRiesgo__riesgo_6_9",
+  "title": "Riesgo por Contaminación ambiental del suelo"
+ },
+ {
+  "id": "ZonasRiesgo__riesgo_6_27",
+  "title": "Riesgo por Derrumbes y colapso de edificaciones"
+ },
+ {
+  "id": "ZonasRiesgo__riesgo_6_10",
+  "title": "Riesgo por Derrumbes y colapso de infraestructuras"
+ },
+ {
+  "id": "ZonasRiesgo__riesgo_6_19",
+  "title": "Riesgo por Establecimientos de pública concurrencia"
+ },
+ {
+  "id": "ZonasRiesgo__riesgo_5_3",
+  "title": "Riesgo por Hundimientos del terreno"
+ },
+ {
+  "id": "ZonasRiesgo__riesgo_3_1",
+  "title": "Riesgo por Incendios forestales"
+ },
+ {
+  "id": "ZonasRiesgo__riesgo_6_26",
+  "title": "Riesgo por Incendios urbanos en exterior"
+ },
+ {
+  "id": "ZonasRiesgo__riesgo_6_25",
+  "title": "Riesgo por Incendios urbanos en interior"
+ },
+ {
+  "id": "ZonasRiesgo__riesgo_1_5",
+  "title": "Riesgo por Lluvias fuertes (1h)"
+ },
+ {
+  "id": "ZonasRiesgo__riesgo_5_1",
+  "title": "Riesgo por Movimientos de ladera"
+ },
+ {
+  "id": "ZonasRiesgo__riesgo_2_3",
+  "title": "Riesgo por Rotura de presas"
+ },
+ {
+  "id": "ZonasRiesgo__riesgo_4_1",
+  "title": "Riesgo por Sismos"
+ },
+ {
+  "id": "ZonasRiesgo__riesgo_5_4",
+  "title": "Riesgo por Subsidencias"
+ },
+ {
+  "id": "ZonasRiesgo__riesgo_6_23",
+  "title": "Riesgo por Suministros esenciales: agua"
+ },
+ {
+  "id": "ZonasRiesgo__riesgo_6_24",
+  "title": "Riesgo por Suministros esenciales: luz"
+ },
+ {
+  "id": "ZonasRiesgo__riesgo_5_5",
+  "title": "Riesgo por Terrenos Expansivos"
+ },
+ {
+  "id": "ZonasRiesgo__riesgo_2_2",
+  "title": "Riesgo por Torrencialidad en cauces"
+ },
+ {
+  "id": "ZonasRiesgo__riesgo_6_14",
+  "title": "Riesgo por Transporte civil por avión"
+ },
+ {
+  "id": "ZonasRiesgo__riesgo_6_16",
+  "title": "Riesgo por Transporte civil por carretera"
+ },
+ {
+  "id": "ZonasRiesgo__riesgo_6_15",
+  "title": "Riesgo por Transporte civil por tren"
+ },
+ {
+  "id": "ZonasRiesgo__riesgo_6_12",
+  "title": "Riesgo por Transporte de energía"
+ },
+ {
+  "id": "ZonasRiesgo__riesgo_6_2",
+  "title": "Riesgo por Transporte de mercancías peligrosas por carretera"
+ },
+ {
+  "id": "ZonasRiesgo__riesgo_6_1",
+  "title": "Riesgo por Transporte de mercancías peligrosas por ferrocarril"
+ },
+ {
+  "id": "ZonasRiesgo__riesgo_1_13",
+  "title": "Riesgo por granizo"
+ },
+ {
+  "id": "ZonasRiesgo__riesgo_1_4",
+  "title": "Riesgo por lluvias persistentes (12 h)"
+ },
+ {
+  "id": "ZonasRiesgo__riesgo_1_6",
+  "title": "Riesgo por nevadas"
+ },
+ {
+  "id": "ZonasRiesgo__riesgo_1_8",
+  "title": "Riesgo por niebla"
+ },
+ {
+  "id": "ZonasRiesgo__riesgo_1_9",
+  "title": "Riesgo por ola de calor"
+ },
+ {
+  "id": "ZonasRiesgo__riesgo_1_10",
+  "title": "Riesgo por ola de frío"
+ },
+ {
+  "id": "ZonasRiesgo__riesgo_1_11",
+  "title": "Riesgo por polvo en suspensión"
+ },
+ {
+  "id": "ZonasRiesgo__riesgo_1_12",
+  "title": "Riesgo por sequías (consumo humano)"
+ },
+ {
+  "id": "ZonasRiesgo__riesgo_1_1",
+  "title": "Riesgo por temperaturas máximas"
+ },
+ {
+  "id": "ZonasRiesgo__riesgo_1_2",
+  "title": "Riesgo por temperaturas mínimas"
+ },
+ {
+  "id": "ZonasRiesgo__riesgo_1_7",
+  "title": "Riesgo por tormentas"
+ },
+ {
+  "id": "ZonasRiesgo__riesgo_1_3",
+  "title": "Riesgo por vientos fuertes"
+ },
+ {
+  "id": "ZonasRiesgo__vulnera_6_11",
+  "title": "Vulnerabilidad por Accidentes en centrales energéticas"
+ },
+ {
+  "id": "ZonasRiesgo__vulnera_6_17",
+  "title": "Vulnerabilidad por Accidentes en túneles"
+ },
+ {
+  "id": "ZonasRiesgo__vulnera_6_3",
+  "title": "Vulnerabilidad por Accidentes industriales: nube tóxica"
+ },
+ {
+  "id": "ZonasRiesgo__vulnera_6_5",
+  "title": "Vulnerabilidad por Accidentes industriales: radiación"
+ },
+ {
+  "id": "ZonasRiesgo__vulnera_6_4",
+  "title": "Vulnerabilidad por Accidentes industriales: sobrepresión"
+ },
+ {
+  "id": "ZonasRiesgo__vulnera_6_20",
+  "title": "Vulnerabilidad por Actividades deportivas"
+ },
+ {
+  "id": "ZonasRiesgo__vulnera_6_6",
+  "title": "Vulnerabilidad por Actividades extractivas"
+ },
+ {
+  "id": "ZonasRiesgo__vulnera_5_2",
+  "title": "Vulnerabilidad por Aludes"
+ },
+ {
+  "id": "ZonasRiesgo__vulnera_2_1",
+  "title": "Vulnerabilidad por Avenidas y crecidas"
+ },
+ {
+  "id": "ZonasRiesgo__vulnera_6_18",
+  "title": "Vulnerabilidad por Concentraciones humanas"
+ },
+ {
+  "id": "ZonasRiesgo__vulnera_6_9",
+  "title": "Vulnerabilidad por Contaminación Ambiental del Suelo"
+ },
+ {
+  "id": "ZonasRiesgo__vulnera_6_8",
+  "title": "Vulnerabilidad por Contaminación ambiental del agua"
+ },
+ {
+  "id": "ZonasRiesgo__vulnera_6_7",
+  "title": "Vulnerabilidad por Contaminación ambiental del aire"
+ },
+ {
+  "id": "ZonasRiesgo__vulnera_6_27",
+  "title": "Vulnerabilidad por Derrumbes y colapso de edificaciones"
+ },
+ {
+  "id": "ZonasRiesgo__vulnera_6_10",
+  "title": "Vulnerabilidad por Derrumbes y colapso de infraestructuras"
+ },
+ {
+  "id": "ZonasRiesgo__vulnera_6_19",
+  "title": "Vulnerabilidad por Establecimientos de pública concurrencia"
+ },
+ {
+  "id": "ZonasRiesgo__vulnera_5_3",
+  "title": "Vulnerabilidad por Hundimientos del terreno"
+ },
+ {
+  "id": "ZonasRiesgo__vulnera_3_1",
+  "title": "Vulnerabilidad por Incendios forestales"
+ },
+ {
+  "id": "ZonasRiesgo__vulnera_6_26",
+  "title": "Vulnerabilidad por Incendios urbanos en exterior"
+ },
+ {
+  "id": "ZonasRiesgo__vulnera_6_25",
+  "title": "Vulnerabilidad por Incendios urbanos en interior"
+ },
+ {
+  "id": "ZonasRiesgo__vulnera_1_5",
+  "title": "Vulnerabilidad por Lluvias fuertes (1h)"
+ },
+ {
+  "id": "ZonasRiesgo__vulnera_1_4",
+  "title": "Vulnerabilidad por Lluvias persistentes (12 h)"
+ },
+ {
+  "id": "ZonasRiesgo__vulnera_5_1",
+  "title": "Vulnerabilidad por Movimientos de ladera"
+ },
+ {
+  "id": "ZonasRiesgo__vulnera_1_6",
+  "title": "Vulnerabilidad por Nevadas"
+ },
+ {
+  "id": "ZonasRiesgo__vulnera_1_8",
+  "title": "Vulnerabilidad por Niebla"
+ },
+ {
+  "id": "ZonasRiesgo__vulnera_1_9",
+  "title": "Vulnerabilidad por Ola de calor"
+ },
+ {
+  "id": "ZonasRiesgo__vulnera_2_3",
+  "title": "Vulnerabilidad por Rotura de presas"
+ },
+ {
+  "id": "ZonasRiesgo__vulnera_4_1",
+  "title": "Vulnerabilidad por Sismos"
+ },
+ {
+  "id": "ZonasRiesgo__vulnera_5_4",
+  "title": "Vulnerabilidad por Subsidencias"
+ },
+ {
+  "id": "ZonasRiesgo__vulnera_6_23",
+  "title": "Vulnerabilidad por Suministros esenciales: agua"
+ },
+ {
+  "id": "ZonasRiesgo__vulnera_6_24",
+  "title": "Vulnerabilidad por Suministros esenciales: luz"
+ },
+ {
+  "id": "ZonasRiesgo__vulnera_1_2",
+  "title": "Vulnerabilidad por Temperaturas Mínimas"
+ },
+ {
+  "id": "ZonasRiesgo__vulnera_5_5",
+  "title": "Vulnerabilidad por Terrenos expansivos"
+ },
+ {
+  "id": "ZonasRiesgo__vulnera_1_7",
+  "title": "Vulnerabilidad por Tormentas"
+ },
+ {
+  "id": "ZonasRiesgo__vulnera_2_2",
+  "title": "Vulnerabilidad por Torrencialidad en cauces"
+ },
+ {
+  "id": "ZonasRiesgo__vulnera_6_14",
+  "title": "Vulnerabilidad por Transporte civil por avión"
+ },
+ {
+  "id": "ZonasRiesgo__vulnera_6_16",
+  "title": "Vulnerabilidad por Transporte civil por carretera"
+ },
+ {
+  "id": "ZonasRiesgo__vulnera_6_15",
+  "title": "Vulnerabilidad por Transporte civil por tren"
+ },
+ {
+  "id": "ZonasRiesgo__vulnera_6_12",
+  "title": "Vulnerabilidad por Transporte de energía"
+ },
+ {
+  "id": "ZonasRiesgo__vulnera_6_2",
+  "title": "Vulnerabilidad por Transporte de mercancías peligrosas por carretera"
+ },
+ {
+  "id": "ZonasRiesgo__vulnera_6_1",
+  "title": "Vulnerabilidad por Transporte de mercancías peligrosas por ferrocarril"
+ },
+ {
+  "id": "ZonasRiesgo__vulnera_1_3",
+  "title": "Vulnerabilidad por Vientos Fuertes"
+ },
+ {
+  "id": "ZonasRiesgo__vulnera_1_1",
+  "title": "Vulnerabilidad por altas temperaturas"
+ },
+ {
+  "id": "ZonasRiesgo__vulnera_1_13",
+  "title": "Vulnerabilidad por granizo"
+ },
+ {
+  "id": "ZonasRiesgo__vulnera_1_10",
+  "title": "Vulnerabilidad por ola de frío"
+ },
+ {
+  "id": "ZonasRiesgo__vulnera_1_11",
+  "title": "Vulnerabilidad por polvo en suspensión"
+ },
+ {
+  "id": "ZonasRiesgo__vulnera_1_12",
+  "title": "Vulnerabilidad por sequías (consumo humano)"
+ },
+ {
+  "id": "ZonasRiesgo__Vulnerabilidad_Territorial_IIFF_R",
+  "title": "Vulnerabilidad territorial ante incendio forestal"
+ },
+ {
+  "id": "ZonasRiesgo__BOPC_ZONIF_RASTER",
+  "title": "Zonificación y Priorización del Riesgo de Incendios Forestales en la Comunidad de Madrid"
+ }
+]

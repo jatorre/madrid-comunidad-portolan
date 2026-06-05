@@ -1,0 +1,49 @@
+name: Publish catalog to bucket
+
+# Generic — all per-repo values come from portolan.config.json. The only repo-specific
+# setup is the two bucket-write secrets. Publishes the metadata + generates the Iceberg
+# REST catalog, STAC, OGC API - Records and the HTML explorer onto the bucket.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'data/**'
+      - 'items/**'
+      - 'records/**'
+      - 'catalog.json'
+      - 'portolan.config.json'
+      - 'tools/publish.py'
+      - '.github/workflows/publish.yml'
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Gate on credentials
+        id: gate
+        env:
+          KEY: ${{ secrets.UPCLOUD_ACCESS_KEY }}
+        run: |
+          if [ -z "$KEY" ]; then
+            echo "::warning::No bucket credentials (secret UPCLOUD_ACCESS_KEY). Skipping publish."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Install mc
+        if: steps.gate.outputs.skip != 'true'
+        run: |
+          curl -sSL https://dl.min.io/client/mc/release/linux-amd64/mc -o /usr/local/bin/mc
+          chmod +x /usr/local/bin/mc
+      - name: Publish to bucket
+        if: steps.gate.outputs.skip != 'true'
+        run: |
+          ENDPOINT=$(python3 -c "import json;print(json.load(open('portolan.config.json'))['s3_endpoint'])")
+          ALIAS=$(python3 -c "import json;print(json.load(open('portolan.config.json')).get('mc_alias','upcloud'))")
+          mc alias set "$ALIAS" "$ENDPOINT" \
+            "${{ secrets.UPCLOUD_ACCESS_KEY }}" "${{ secrets.UPCLOUD_SECRET_KEY }}"
+          python3 tools/publish.py

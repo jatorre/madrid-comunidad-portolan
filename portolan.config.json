@@ -1,0 +1,17 @@
+{
+  "publisher": "Comunidad de Madrid",
+  "alias": "comunidad-madrid",
+  "flag": "🌐",
+  "repo": "https://github.com/jatorre/madrid-comunidad-portolan",
+  "s3_endpoint": "https://storage.googleapis.com",
+  "bucket_path": "carto-portolan-madrid/comunidad-madrid",
+  "public_base": "https://storage.googleapis.com/carto-portolan-madrid/comunidad-madrid",
+  "gs_path": "gs://carto-portolan-madrid/comunidad-madrid",
+  "mc_alias": "gcs",
+  "rest_prefix": "sdi",
+  "data_provider": "Comunidad de Madrid (IDEM — Infraestructura de Datos Espaciales)",
+  "data_license": "CC-BY-4.0",
+  "crs": "EPSG:25830",
+  "contributions_repo": "https://github.com/jatorre/madrid-comunidad-portolan",
+  "contributions_issues_url": "https://github.com/jatorre/madrid-comunidad-portolan/issues"
+}

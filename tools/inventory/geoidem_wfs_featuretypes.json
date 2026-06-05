@@ -1,0 +1,1986 @@
+[
+ {
+  "name": "Elevaciones:IDEM_MA_ALTIMETRIA_20",
+  "title": "Altimetría de la Comunidad de Madrid (curvas de nivel cada 20 m)",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "Elevaciones",
+  "bbox": "-4.6003056005779905 39.87760448070074 / -3.05341573458715 41.1670026094086",
+  "count": 7239
+ },
+ {
+  "name": "Elevaciones:IDEM_MA_ALTIMETRIA_100",
+  "title": "Altimetría de la Comunidad de Madrid (curvas de nivel maestras)",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "Elevaciones",
+  "bbox": "-4.600304943469658 39.88771890858953 / -3.053423589350901 41.166975587290764",
+  "count": 1407
+ },
+ {
+  "name": "Direcciones:IDEM_GDIE_G_APP",
+  "title": "Aproximaciones postales de la Comunidad de Madrid",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "Direcciones",
+  "bbox": "-4.586675465786085 39.90192050220426 / -3.076619326742693 41.137348998726814",
+  "count": 819709
+ },
+ {
+  "name": "Suelo:IDEM_MA_ASOC_SUELOS",
+  "title": "Asociaciones de Suelos (Sistemática FAO) de la Comunidad de Madrid",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "Suelo",
+  "bbox": "-4.601730937318062 39.876860537352044 / -3.052819763446812 41.167115494289845",
+  "count": 615
+ },
+ {
+  "name": "UsoDelSuelo:IDEM_MA_IMIDRA_GANADERIA",
+  "title": "Cabezas de ganado de la PAC 2022",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "UsoDelSuelo",
+  "bbox": "-4.601397294022548 39.87686479727913 / -3.052819836806753 41.16711639173217",
+  "count": 181
+ },
+ {
+  "name": "UsoDelSuelo:IDEM_MA_CALIDAD_PAISAJE",
+  "title": "Calidad Visual del Paisaje de la Comunidad de Madrid",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "UsoDelSuelo",
+  "bbox": "-4.601730937318062 39.876860537352044 / -3.052819763446812 41.167115494289845",
+  "count": 237
+ },
+ {
+  "name": "RedesTransporte:IDEM_MA_CAMINO_SANTIAGO",
+  "title": "Camino de Santiago de Madrid",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "RedesTransporte",
+  "bbox": "-4.071469190042972 40.49730717380544 / -3.6942386036417556 40.794959183586144",
+  "count": 1
+ },
+ {
+  "name": "Direcciones:IDEM_GDIE_G_PASEILLO",
+  "title": "Capa de Paseillos de la Comunidad de Madrid",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "Direcciones",
+  "bbox": "-4.59000464867935 39.87728929830827 / -3.0594409649526417 41.16283110157687",
+  "count": 819709
+ },
+ {
+  "name": "Zonas:IDEM_MA_PESCA_CYS_P",
+  "title": "Captura y Suelta Inicio-Fin",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "Zonas",
+  "bbox": "-4.542213267740224 40.20872177950614 / -3.137920815891629 41.03109273118226",
+  "count": 37
+ },
+ {
+  "name": "Zonas:IDEM_MA_PESCA_CYS",
+  "title": "Captura y suelta Comunidad de Madrid",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "Zonas",
+  "bbox": "-4.545116054883151 40.07784747630312 / -3.1376562640357006 41.104329731272415",
+  "count": 14
+ },
+ {
+  "name": "Zonas:IDEM_MA_PESCA_CYS_PRS",
+  "title": "Captura y suelta Zonas B del Parque Regional del Sureste",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "Zonas",
+  "bbox": "-3.682469417440777 40.08528593206039 / -3.424108286233175 40.443871871285715",
+  "count": 1
+ },
+ {
+  "name": "UsoDelSuelo:IDEM_MA_VEGETACION_1982",
+  "title": "Cartografía y caracterización de los usos del suelo y de la vegetación natural de Madrid (1982)",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "UsoDelSuelo",
+  "bbox": "-4.601730937318062 39.876860540054025 / -3.052819763448888 41.167115494289845",
+  "count": 6212
+ },
+ {
+  "name": "Zonas:IDEM_MA_CEH_EMBALSES",
+  "title": "Catálogo de Embalses y Humedales de la Comunidad de Madrid. EMBALSES",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "Zonas",
+  "bbox": "-4.433898999268167 40.329508054804556 / -3.463380016327349 41.03710041485055",
+  "count": 14
+ },
+ {
+  "name": "Zonas:IDEM_MA_CEH_HUMEDALES",
+  "title": "Catálogo de Embalses y Humedales de la Comunidad de Madrid.HUMEDALES",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "Zonas",
+  "bbox": "-4.153958827138391 39.92395837423843 / -3.4713361825683138 40.86921740057025",
+  "count": 80
+ },
+ {
+  "name": "ServiciosPublicos:IDEM_MA_CENTROS_VISITA_PN",
+  "title": "Centros de Visitantes del Parque Nacional de la Sierra de Guadarrama",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ServiciosPublicos",
+  "bbox": "-4.072741364998482 40.724156104528554 / -3.8847835210552044 40.885170686494405",
+  "count": 4
+ },
+ {
+  "name": "UsoDelSuelo:IDEM_CLASES_AGROLOGICAS",
+  "title": "Clases Agrológicas de la Comunidad de Madrid",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "UsoDelSuelo",
+  "bbox": "-4.601397023691574 39.876865435891816 / -3.052819181340272 41.16711622601472",
+  "count": 11794
+ },
+ {
+  "name": "UsoDelSuelo:VPLA_V_CLASIFICACION",
+  "title": "Clases de suelo en Planeamiento General",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "UsoDelSuelo",
+  "bbox": "-4.6013972934918455 39.876864977526324 / -3.052819837134086 41.16711639505206",
+  "count": 13856
+ },
+ {
+  "name": "UsoDelSuelo:VPLA_V_CLASIFICACION_MODIF",
+  "title": "Clases de suelo en Planeamiento de Desarrollo",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "UsoDelSuelo",
+  "bbox": "-4.516587895047384 40.00360396054681 / -3.0880130337009115 41.136671846996045",
+  "count": 2498
+ },
+ {
+  "name": "UsoDelSuelo:VPLA_V_CLASIFICACION_REF_19",
+  "title": "Clasificación del suelo en Planeamiento Urbanístico Refundido  2019",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "UsoDelSuelo",
+  "bbox": "-4.6013972934918455 39.876864977526324 / -3.052819837134086 41.16711639505206",
+  "count": 13257
+ },
+ {
+  "name": "UsoDelSuelo:VPLA_V_CLASIFICACION_REF_23",
+  "title": "Clasificación del suelo en Planeamiento Urbanístico Refundido 2023",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "UsoDelSuelo",
+  "bbox": "-4.6013972934918455 39.876864977526324 / -3.052819837134086 41.16711639505206",
+  "count": 13256
+ },
+ {
+  "name": "Zonas:IDEM_MA_COMARCAS_FORESTALES",
+  "title": "Comarcas Forestales de la Comunidad de Madrid",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "Zonas",
+  "bbox": "-4.601397003503758 39.876865421750516 / -3.052819196533949 41.167116228709865",
+  "count": 17
+ },
+ {
+  "name": "InstalacionesMedioAmbiente:IDEM_MA_CA_NRF_TOTAL_18",
+  "title": "Contaminantes Atmosféricos 2018",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "InstalacionesMedioAmbiente",
+  "bbox": "-4.601397294595552 39.87686479737851 / -3.0528198369957957 41.16711639144888",
+  "count": 181
+ },
+ {
+  "name": "InstalacionesMedioAmbiente:IDEM_MA_CA_NRF_TOTAL_22",
+  "title": "Contaminantes Atmosféricos 2022",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "InstalacionesMedioAmbiente",
+  "bbox": "-4.601397294595552 39.87686479737851 / -3.0528198369957957 41.16711639144888",
+  "count": 181
+ },
+ {
+  "name": "InstalacionesMedioAmbiente:IDEM_MA_CA_NRF_TOTAL_23",
+  "title": "Contaminantes Atmosféricos 2023",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "InstalacionesMedioAmbiente",
+  "bbox": "-4.601397294595552 39.87686479737851 / -3.0528198369957957 41.16711639144888",
+  "count": 181
+ },
+ {
+  "name": "Zonas:IDEM_CORREDORES_ECO",
+  "title": "Corredores ecológicos 2010 de la Comunidad de Madrid",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "Zonas",
+  "bbox": "-4.686685519649489 39.84586868426016 / -2.8152463339137905 41.26345685319389",
+  "count": 149
+ },
+ {
+  "name": "Zonas:IDEM_MA_COTOS_CAZA",
+  "title": "Cotos Privados de Caza en la Comunidad de Madrid",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "Zonas",
+  "bbox": "-4.599955377412942 39.87912510877307 / -3.0530648413061465 41.162820285792975",
+  "count": 752
+ },
+ {
+  "name": "Zonas:IDEM_MA_PESCA_COTOS",
+  "title": "Cotos de Pesca",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "Zonas",
+  "bbox": "-4.296954094524347 40.074750487305735 / -3.1339115266069903 40.95717181089026",
+  "count": 28
+ },
+ {
+  "name": "Zonas:IDEM_MA_PESCA_COTOS_P",
+  "title": "Cotos de Pesca Inicio-Fin",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "Zonas",
+  "bbox": "-4.296744305153024 40.026087892795104 / -3.133816280341037 40.956108489519046",
+  "count": 69
+ },
+ {
+  "name": "CubiertaTerrestre:IDEM_BTA_10M_CUBIERTER_LIN_11",
+  "title": "Cubierta Terrestre (Líneas). BTA 1:10000 del año 2011",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "CubiertaTerrestre",
+  "bbox": "-4.161552647287564 39.978485488528534 / -3.2108229902319185 40.79479806355347",
+  "count": 298629
+ },
+ {
+  "name": "CubiertaTerrestre:IDEM_BTA_10M_CUBIERTER_POL_11",
+  "title": "Cubierta Terrestre (Polígonos). BTA 1:10000 del año 2011",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "CubiertaTerrestre",
+  "bbox": "-4.161552647287564 39.978485488528534 / -3.2108229902319185 40.79479806355347",
+  "count": 53108
+ },
+ {
+  "name": "BTA:IDEM_BTA_CUBIERTER_LIN_17",
+  "title": "Cubierta Terrestre Lineas",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "BTA",
+  "bbox": "-4.601733127716921 39.87686100354528 / -3.052776549595748 41.16720443256755",
+  "count": 409777
+ },
+ {
+  "name": "BTA:IDEM_BTA_CUBIERTER_POL_17",
+  "title": "Cubierta Terrestre Poligonos",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "BTA",
+  "bbox": "-4.601733127716921 39.87686100354528 / -3.052776549595748 41.16720443256755",
+  "count": 137213
+ },
+ {
+  "name": "Hidrografia:IDEM_MA_CUENCAS",
+  "title": "Cuencas hidrográficas en la Comunidad de Madrid",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "Hidrografia",
+  "bbox": "-4.601321042341387 39.876910122703606 / -3.052921625874808 41.16711634653491",
+  "count": 1012
+ },
+ {
+  "name": "UsoDelSuelo:IDEM_MA_IMIDRA_CULT_PAC",
+  "title": "Cultivos de la PAC 2022",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "UsoDelSuelo",
+  "bbox": "-4.5875234026204215 39.88349000802163 / -3.0551350691997223 41.111575209042705",
+  "count": 95983
+ },
+ {
+  "name": "Zonas:IDEM_MA_PESCA_VEDA_CUEN",
+  "title": "Delimitación de cuencas vedadas de la Comunidad de Madrid",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "Zonas",
+  "bbox": "-4.334824482458202 40.55310470758932 / -3.3918544500317935 41.16645016319576",
+  "count": 7
+ },
+ {
+  "name": "SistemasCuadriculas:IDEM_URB_HOJAS_10000",
+  "title": "Distribución de hojas del Mapa Topográfico Escala.- 1:10.000 de la CA de Madrid en formato shape y sistema de proyección ETRS89 de los años 2009 y 2011",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "SistemasCuadriculas",
+  "bbox": "-4.64554319078913 39.83780624177743 / -2.976146839792446 41.20036378118243",
+  "count": 219
+ },
+ {
+  "name": "UnidadesAdministrativas:IDEM_GDIE_G_DISTRITO",
+  "title": "Distritos censales de la Comunidad de Madrid",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "UnidadesAdministrativas",
+  "bbox": "-4.601396938289687 39.876864802146216 / -3.052818667400452 41.16711648658971",
+  "count": 246
+ },
+ {
+  "name": "UnidadesAdministrativas:IDEM_CM_UNID_ADMIN",
+  "title": "Divisiones Administrativas de la Comunidad de Madrid",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "UnidadesAdministrativas",
+  "bbox": "-4.601397294022548 39.87686479727913 / -3.052819836806753 41.16711639173217",
+  "count": 194
+ },
+ {
+  "name": "ServiciosPublicos:IDEM_EIEL_ALIVIADERO_23",
+  "title": "EIEL_23 Aliviadero",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ServiciosPublicos",
+  "bbox": "-4.525334731388326 40.054154322177546 / -3.089735594001581 41.12974642532399",
+  "count": 569
+ },
+ {
+  "name": "ServiciosPublicos:IDEM_EIEL_ALUMBRADO_23",
+  "title": "EIEL_23 Alumbrado",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ServiciosPublicos",
+  "bbox": "-4.514412513682866 40.056027934895745 / -3.0910608302861977 41.137305421113226",
+  "count": 385
+ },
+ {
+  "name": "ServiciosPublicos:IDEM_EIEL_CAPTACION_23",
+  "title": "EIEL_23 Captación Agua",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ServiciosPublicos",
+  "bbox": "-4.538958043243046 40.039402134644064 / -3.1685342299205157 41.137979128404645",
+  "count": 119
+ },
+ {
+  "name": "ServiciosPublicos:IDEM_EIEL_CASA_CONSISTORIAL_23",
+  "title": "EIEL_23 Casa Consistorial",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ServiciosPublicos",
+  "bbox": "-4.512202941525813 40.05949669612975 / -3.093291116019102 41.136472287198735",
+  "count": 742
+ },
+ {
+  "name": "ServiciosPublicos:IDEM_EIEL_CEMENTERIO_23",
+  "title": "EIEL_23 Cementerio",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ServiciosPublicos",
+  "bbox": "-4.503974462312675 40.068120807025856 / -3.1039019401671317 41.136478102729114",
+  "count": 207
+ },
+ {
+  "name": "ServiciosPublicos:IDEM_EIEL_CENT_ASISTENCIAL_23",
+  "title": "EIEL_23 Centro Asistencial",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ServiciosPublicos",
+  "bbox": "-4.503312692242578 40.091824183117936 / -3.108208602017322 41.13130372002641",
+  "count": 343
+ },
+ {
+  "name": "ServiciosPublicos:IDEM_EIEL_CENT_CULTURAL_23",
+  "title": "EIEL_23 Centro Cultural",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ServiciosPublicos",
+  "bbox": "-4.5115738852937275 40.05733399981306 / -3.1049997141404435 41.13394395586354",
+  "count": 659
+ },
+ {
+  "name": "ServiciosPublicos:IDEM_EIEL_CENT_SANITARIO_23",
+  "title": "EIEL_23 Centros Sanitarios",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ServiciosPublicos",
+  "bbox": "-4.510759829410355 40.05993639959168 / -3.1097883091873255 41.13479174104982",
+  "count": 194
+ },
+ {
+  "name": "ServiciosPublicos:IDEM_EIEL_CENT_ENSENANZA_23",
+  "title": "EIEL_23 Centros de enseñanza",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ServiciosPublicos",
+  "bbox": "-4.5299115630810265 40.05981572144063 / -3.106504977234393 41.05861915984052",
+  "count": 636
+ },
+ {
+  "name": "ServiciosPublicos:IDEM_EIEL_DEPURADORA_23",
+  "title": "EIEL_23 Depuradora",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ServiciosPublicos",
+  "bbox": "-4.525283958003436 40.04962882684051 / -3.0897225489222087 41.12974643103742",
+  "count": 158
+ },
+ {
+  "name": "ServiciosPublicos:IDEM_EIEL_DEPOSITO_23",
+  "title": "EIEL_23 Depósito",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ServiciosPublicos",
+  "bbox": "-4.512544581751189 40.040267831724584 / -3.110902992529977 41.138051331272216",
+  "count": 424
+ },
+ {
+  "name": "ServiciosPublicos:IDEM_EIEL_EDIFIC_PUB_SIN_USO_23",
+  "title": "EIEL_23 Edificio Público Sin uso",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ServiciosPublicos",
+  "bbox": "-4.46136066539004 40.09623812128795 / -3.1612791378930796 41.09221847952095",
+  "count": 67
+ },
+ {
+  "name": "RedesTransporte:IDEM_EIEL_INFRAESTR_VIARIA_23",
+  "title": "EIEL_23 Infraestructura Viaria",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "RedesTransporte",
+  "bbox": "-4.53611628816765 40.049633682193814 / -3.0876485368484423 41.13753582330728",
+  "count": 2097
+ },
+ {
+  "name": "ServiciosPublicos:IDEM_EIEL_INSTAL_DEPORTIVA_23",
+  "title": "EIEL_23 Instalación Deportiva",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ServiciosPublicos",
+  "bbox": "-4.511208492434675 40.05326546484466 / -3.10908209564609 41.13510419220974",
+  "count": 726
+ },
+ {
+  "name": "ServiciosPublicos:IDEM_EIEL_LONJA_MERC_FERIA_23",
+  "title": "EIEL_23 Lonja Mercado Feria",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ServiciosPublicos",
+  "bbox": "-4.499162838847748 40.13144713470345 / -3.3509452964360453 40.86353195442726",
+  "count": 26
+ },
+ {
+  "name": "UnidadesAdministrativas:IDEM_EIEL_NUC_ABANDONADO_23",
+  "title": "EIEL_23 Núcleos abandonados",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "UnidadesAdministrativas",
+  "bbox": "-4.307070751496097 40.235767742065775 / -4.307046899885186 40.23578602172854",
+  "count": 1
+ },
+ {
+  "name": "UnidadesAdministrativas:IDEM_EIEL_NUCLEOS_23",
+  "title": "EIEL_23 Núcleos de Población",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "UnidadesAdministrativas",
+  "bbox": "-4.536004173562879 40.049669371610925 / -3.0872172527202775 41.13750733932029",
+  "count": 467
+ },
+ {
+  "name": "CubiertaTerrestre:IDEM_EIEL_PARQUE_23",
+  "title": "EIEL_23 Parques",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "CubiertaTerrestre",
+  "bbox": "-4.511488849811756 40.05587515044609 / -3.0928224972589438 41.13502117024122",
+  "count": 2100
+ },
+ {
+  "name": "ServiciosPublicos:IDEM_EIEL_POTABILIZACION_23",
+  "title": "EIEL_23 Potabilizacion",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ServiciosPublicos",
+  "bbox": "-4.511500068589543 40.04019654700609 / -3.4213155665926487 41.111914714208595",
+  "count": 23
+ },
+ {
+  "name": "ServiciosPublicos:IDEM_EIEL_PROTECCION_CIVIL_23",
+  "title": "EIEL_23 Protección Civil",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ServiciosPublicos",
+  "bbox": "-4.484461298512294 40.09289821754807 / -3.107524591585013 41.06519665638759",
+  "count": 125
+ },
+ {
+  "name": "ServiciosPublicos:IDEM_EIEL_PUNTO_VERTIDO_23",
+  "title": "EIEL_23 Punto de vertido",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ServiciosPublicos",
+  "bbox": "-4.526459299036258 40.04774001428557 / -3.0887844165145064 41.12918049362684",
+  "count": 156
+ },
+ {
+  "name": "ServiciosPublicos:IDEM_EIEL_RAMAL_SANEAMIENTO_23",
+  "title": "EIEL_23 Ramal Saneamiento",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ServiciosPublicos",
+  "bbox": "-4.515087779944886 40.0547761555933 / -3.0892634421968466 41.13748489395183",
+  "count": 47515
+ },
+ {
+  "name": "ServiciosPublicos:IDEM_EIEL_RED_DISTRIBUCION_23",
+  "title": "EIEL_23 Red de Distribución",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ServiciosPublicos",
+  "bbox": "-4.514608423559229 40.05501948285126 / -3.0780239910183056 41.138079192261",
+  "count": 44499
+ },
+ {
+  "name": "UsoDelSuelo:IDEM_EIEL_SUELO_RURAL_23",
+  "title": "EIEL_23 Suelo Rural",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "UsoDelSuelo",
+  "bbox": "-4.589327266180358 40.03429166445763 / -3.0793326503495786 41.1064087102336",
+  "count": 145
+ },
+ {
+  "name": "UsoDelSuelo:IDEM_EIEL_SUELO_RURAL_PRESERVADO_23",
+  "title": "EIEL_23 Suelo Rural Preservado",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "UsoDelSuelo",
+  "bbox": "-4.6013972934918455 40.02414050779671 / -3.052933321022905 41.16711639505206",
+  "count": 151
+ },
+ {
+  "name": "UsoDelSuelo:IDEM_EIEL_SUELO_URBANO_23",
+  "title": "EIEL_23 Suelo Urbano",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "UsoDelSuelo",
+  "bbox": "-4.5146822669928435 40.04866915502197 / -3.101791403130279 41.137487547176825",
+  "count": 155
+ },
+ {
+  "name": "ServiciosPublicos:IDEM_EIEL_TANATORIO_23",
+  "title": "EIEL_23 Tanatorios",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ServiciosPublicos",
+  "bbox": "-4.501284273309701 40.09324742865687 / -3.105670091419388 41.00710664021351",
+  "count": 78
+ },
+ {
+  "name": "ServiciosPublicos:IDEM_EIEL_TRAMO_EMISARIO_23",
+  "title": "EIEL_23 Tramo Emisario",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ServiciosPublicos",
+  "bbox": "-4.526554309446928 40.047738969944184 / -3.0887844165145064 41.129749818816904",
+  "count": 181
+ },
+ {
+  "name": "ServiciosPublicos:IDEM_EIEL_TRAMO_COLECTOR_23",
+  "title": "EIEL_23 Tramo de Colector",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ServiciosPublicos",
+  "bbox": "-4.525418634745195 40.049628150322604 / -3.0897225489222087 41.1332726318476",
+  "count": 1088
+ },
+ {
+  "name": "ServiciosPublicos:IDEM_EIEL_TRAMO_CONDUCCION_23",
+  "title": "EIEL_23 Tramo de Conducción",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ServiciosPublicos",
+  "bbox": "-4.5389316413654335 40.03802878020281 / -3.07804804513784 41.136949022885304",
+  "count": 1983
+ },
+ {
+  "name": "RedesTransporte:IDEM_EIEL_TRAMO_CARRETERA_23",
+  "title": "EIEL_23 Tramo de carretera",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "RedesTransporte",
+  "bbox": "-4.590052016789727 40.032640500818644 / -3.081428180815389 41.16286456711166",
+  "count": 1095
+ },
+ {
+  "name": "ServiciosPublicos:IDEM_EIEL_VERTEDERO_23",
+  "title": "EIEL_23_Vertedero",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ServiciosPublicos",
+  "bbox": "-4.501254441809847 40.061680875529724 / -3.112582065163856 41.01644600519024",
+  "count": 120
+ },
+ {
+  "name": "Habitats:IDEM_MA_ECOSISTEMAS_06",
+  "title": "Ecosistemas de la Comunidad de Madrid",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "Habitats",
+  "bbox": "-4.6017310469413895 39.876860540054025 / -3.052819763448888 41.16711999827637",
+  "count": 1740
+ },
+ {
+  "name": "BTA:IDEM_BTA_EDIPOBCONS_LIN_17",
+  "title": "Edificaciones Lineas",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "BTA",
+  "bbox": "-4.600589779757241 39.87706052599076 / -3.0684518664997236 41.16623201104058",
+  "count": 3125510
+ },
+ {
+  "name": "BTA:IDEM_BTA_EDIPOBCONS_POL_17",
+  "title": "Edificaciones Poligonos",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "BTA",
+  "bbox": "-4.587500141195309 39.881538894664324 / -3.068830445042922 41.16608765182389",
+  "count": 578627
+ },
+ {
+  "name": "BTA:IDEM_BTA_EDIPOBCONS_PUN_17",
+  "title": "Edificaciones Puntos",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "BTA",
+  "bbox": "-4.558217295777573 39.88768387307021 / -3.0635188807947857 41.16021311889504",
+  "count": 45291
+ },
+ {
+  "name": "Edificios:IDEM_BTA_10M_EDIPOBCONS_LIN_11",
+  "title": "Edificaciones, Poblaciones y Construcciones (Líneas). BTA 1:10000 del año 2011",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "Edificios",
+  "bbox": "-4.161552647287564 39.978485488528534 / -3.2108229902319185 40.79479806355347",
+  "count": 2989595
+ },
+ {
+  "name": "Edificios:IDEM_BTA_10M_EDIPOBCONS_POL_11",
+  "title": "Edificaciones, Poblaciones y Construcciones (Polígonos). BTA 1:10000 del año 2011",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "Edificios",
+  "bbox": "-4.161552647287564 39.9795970786723 / -3.213050260378346 40.794793879991936",
+  "count": 443699
+ },
+ {
+  "name": "Edificios:IDEM_BTA_10M_EDIPOBCONS_PUN_11",
+  "title": "Edificaciones, Poblaciones y Construcciones (Puntos). BTA 1:10000 del año 2011",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "Edificios",
+  "bbox": "-4.15754780187092 40.02295669047457 / -3.2143091689507197 40.79388819758496",
+  "count": 4186
+ },
+ {
+  "name": "UnidadesAdministrativas:IDEM_GDIE_G_ENTIDAD",
+  "title": "Entidades de Población Comunidad de Madrid",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "UnidadesAdministrativas",
+  "bbox": "-4.601396938289687 39.876864802146216 / -3.052818667400452 41.16711648658971",
+  "count": 789
+ },
+ {
+  "name": "LugaresProtegidos:IDEM_MA_ENP",
+  "title": "Espacios Naturales Protegidos (ENP_ES30) a escala 1:25.000 del año 2014",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "LugaresProtegidos",
+  "bbox": "-4.209545125916721 39.98949272918228 / -3.416295204705648 41.13766355633118",
+  "count": 9
+ },
+ {
+  "name": "InstalacionesMedioAmbiente:IDEM_MA_EST_CALIDAD_AIRE",
+  "title": "Estaciones de Calidad del Aire",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "InstalacionesMedioAmbiente",
+  "bbox": "-4.409309468290941 40.02642881537837 / -3.2202252778162355 40.91040730144116",
+  "count": 52
+ },
+ {
+  "name": "ServiciosPublicos:IDEM_MA_ETAP",
+  "title": "Estaciones de Tratamiento de Agua Potable (ETAP) en la Comunidad de Madrid",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ServiciosPublicos",
+  "bbox": "-4.507844630451693 40.04026398595983 / -3.423096495390428 40.9476645764461",
+  "count": 14
+ },
+ {
+  "name": "ServiciosPublicos:IDEM_MA_EDAR",
+  "title": "Estaciones depuradoras de aguas residuales",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ServiciosPublicos",
+  "bbox": "-4.525351876119557 40.014974260057066 / -3.0896487787179843 41.129550468950576",
+  "count": 155
+ },
+ {
+  "name": "RegionesBiogeograficas:IDEM_MA_FISIOGRAFIA_50M",
+  "title": "Fisiografía de la Comunidad de Madrid a escala 1:50.000",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "RegionesBiogeograficas",
+  "bbox": "-4.601730937318062 39.876860537352044 / -3.052819763446812 41.167115494289845",
+  "count": 6484
+ },
+ {
+  "name": "RegionesBiogeograficas:IDEM_MA_FISIOGRAFIA_500M",
+  "title": "Fisiografía de la Comunidad de Madrid, a escala 1:500.000",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "RegionesBiogeograficas",
+  "bbox": "-4.601730937318062 39.876860540054025 / -3.052819763448888 41.167115494289845",
+  "count": 16
+ },
+ {
+  "name": "UsoDelSuelo:IDEM_MA_FRAGILIDAD_PAISAJE",
+  "title": "Fragilidad Visual del Paisaje de la Comunidad de Madrid",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "UsoDelSuelo",
+  "bbox": "-4.601730937318062 39.876860537352044 / -3.052819763446812 41.167115494289845",
+  "count": 237
+ },
+ {
+  "name": "InstalacionesMedioAmbiente:IDEM_MA_CA_CRF_TOTAL_18",
+  "title": "Gases de Efecto Invernadero 2018",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "InstalacionesMedioAmbiente",
+  "bbox": "-4.601397294595552 39.87686479737851 / -3.0528198369957957 41.16711639144888",
+  "count": 181
+ },
+ {
+  "name": "InstalacionesMedioAmbiente:IDEM_MA_CA_CRF_TOTAL_22",
+  "title": "Gases de Efecto Invernadero 2022",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "InstalacionesMedioAmbiente",
+  "bbox": "-4.601397294595552 39.87686479737851 / -3.0528198369957957 41.16711639144888",
+  "count": 181
+ },
+ {
+  "name": "InstalacionesMedioAmbiente:IDEM_MA_CA_CRF_TOTAL_23",
+  "title": "Gases de Efecto Invernadero 2023",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "InstalacionesMedioAmbiente",
+  "bbox": "-4.601397294595552 39.87686479737851 / -3.0528198369957957 41.16711639144888",
+  "count": 181
+ },
+ {
+  "name": "BTA:IDEM_BTA_HIDROGRAF_LIN_17",
+  "title": "Hidrografia Lineas",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "BTA",
+  "bbox": "-4.5908921282207 39.87703135194636 / -3.0528683104939525 41.16612343201673",
+  "count": 240802
+ },
+ {
+  "name": "BTA:IDEM_BTA_HIDROGRAF_POL_17",
+  "title": "Hidrografia Poligonos",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "BTA",
+  "bbox": "-4.586760613499935 39.89789702379838 / -3.067477610714433 41.14194257285748",
+  "count": 142025
+ },
+ {
+  "name": "Hidrografia:IDEM_BTA_10M_HIDROGRAF_LIN_11",
+  "title": "Hidrografía (Líneas). BTA 1:10000 del año 2011",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "Hidrografia",
+  "bbox": "-4.161552647287564 39.978485488528534 / -3.2206551216176984 40.794779234816616",
+  "count": 49227
+ },
+ {
+  "name": "Hidrografia:IDEM_BTA_10M_HIDROGRAF_POL_11",
+  "title": "Hidrografía (Polígonos). BTA 1:10000 del año 2011",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "Hidrografia",
+  "bbox": "-4.161552647287564 40.000558708796405 / -3.2134299951993412 40.794793284841134",
+  "count": 100211
+ },
+ {
+  "name": "Hidrografia:BTA_10M_HIDROGRAF_PUN_11",
+  "title": "Hidrografía (Puntos). BTA 1:10000 del año 2011",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "Hidrografia",
+  "bbox": "-4.161128110650338 39.99831714659248 / -3.2979860734496658 40.79444831282513",
+  "count": 1534
+ },
+ {
+  "name": "BTA:IDEM_BTA_HIDROGRAF_PUN_17",
+  "title": "Hidrografía Puntos",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "BTA",
+  "bbox": "-4.583150752553314 39.89167384574888 / -3.0789282344127074 41.14945219710409",
+  "count": 3334
+ },
+ {
+  "name": "LugaresProtegidos:IDEM_MA_HUMEDAL_RAMSAR",
+  "title": "Humedales incluidos en la lista del convenio RAMSAR (RAMSAR_ES30)",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "LugaresProtegidos",
+  "bbox": "-3.9663049800133425 40.83140982051173 / -3.9327773979782155 40.8664319919596",
+  "count": 1
+ },
+ {
+  "name": "Habitats:IDEM_MA_HABITATS",
+  "title": "Hábitats de la Comunidad de Madrid según la Directiva 92/43/CEE",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "Habitats",
+  "bbox": "-4.601318499369105 39.89478494670616 / -3.0536737591353114 41.16701149930836",
+  "count": 3427
+ },
+ {
+  "name": "ZonasRiesgo:INSTALACIONES_PA",
+  "title": "INSTALACIONES RDPA",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ZonasRiesgo",
+  "bbox": "-8.939306915367208 0.0 / -3.082933256652399 41.104426866676995",
+  "count": 3240
+ },
+ {
+  "name": "ServiciosPublicos:IDEM_MA_INS_RESIDUOS",
+  "title": "Instalaciones de Gestión de Residuos en la Comunidad de Madrid de Titularidad Pública",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ServiciosPublicos",
+  "bbox": "-4.3893256028532965 40.081991881278384 / -3.3049062606983113 41.007585169296625",
+  "count": 28
+ },
+ {
+  "name": "Geologia:IDEM_MA_LITOLOGIA_50M",
+  "title": "Litología de la Comunidad de Madrid a escala 1:50.000",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "Geologia",
+  "bbox": "-4.601730937318062 39.876860537352044 / -3.052819763446812 41.167115494289845",
+  "count": 1122
+ },
+ {
+  "name": "Geologia:IDEM_MA_LITOLOGIA_500M",
+  "title": "Litología de la Comunidad de Madrid a escala 1:500.000",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "Geologia",
+  "bbox": "-4.601730937318062 39.876860540054025 / -3.052819763448888 41.167115494289845",
+  "count": 15
+ },
+ {
+  "name": "LugaresProtegidos:IDEM_MA_RESERVA_BIOS",
+  "title": "Límites de las Reservas de la Biosfera (MAB_ES30)",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "LugaresProtegidos",
+  "bbox": "-4.182023174581844 40.47291946667352 / -3.391378803656375 41.15025920767866",
+  "count": 2
+ },
+ {
+  "name": "UnidadesAdministrativas:IDEM_CM_LIMITES_UNID_ADMIN",
+  "title": "Líneas Límite de la Comunidad de Madrid",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "UnidadesAdministrativas",
+  "bbox": "-4.601397294022548 39.87686479727913 / -3.052819836806753 41.16711639173217",
+  "count": 695
+ },
+ {
+  "name": "UsoDelSuelo:IDEM_MA_VEGETACION",
+  "title": "Mapa Digital Continuo de Vegetación de la Comunidad de Madrid (2006)",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "UsoDelSuelo",
+  "bbox": "-4.601730937318062 39.876860540054025 / -3.052819763448888 41.167115494289845",
+  "count": 40299
+ },
+ {
+  "name": "UsoDelSuelo:IDEM_URB_GEN_CALI_CLASI_14",
+  "title": "Mapa de Clasificación y Calificación Urbanística de la CA de Madrid año 2014",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "UsoDelSuelo",
+  "bbox": "-4.601318691294044 39.87682703504929 / -3.0527490410097124 41.16707076601761",
+  "count": 44735
+ },
+ {
+  "name": "ZonasRiesgo:BOPC_MODELOS_COMBUSTIBLES",
+  "title": "Mapa de Modelos de Combustibles de la Comunidad de Madrid",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ZonasRiesgo",
+  "bbox": "-4.607725981761346 39.872278585292065 / -3.0469680577459055 41.16873839815216",
+  "count": 433681
+ },
+ {
+  "name": "UsoDelSuelo:IDEM_MA_VEGETACION_1998",
+  "title": "Mapa de Vegetación y Usos del Suelo de la Comunidad de Madrid (1998)",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "UsoDelSuelo",
+  "bbox": "-4.601730937318062 39.876860537352044 / -3.052819763446812 41.167115494289845",
+  "count": 5230
+ },
+ {
+  "name": "UsoDelSuelo:IDEM_URB_GEN_CALI_CLASI_10",
+  "title": "Mapa de clasificación y calificación urbanística de la CA de Madrid año 2010",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "UsoDelSuelo",
+  "bbox": "-4.6001333342871575 39.878751711816044 / -3.0515349619927505 41.16898499241527",
+  "count": 43233
+ },
+ {
+  "name": "UsoDelSuelo:IDEM_MA_MSFOREST_MADRID",
+  "title": "Mapa del Terreno Forestal de la Comunidad de Madrid. Año 2008",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "UsoDelSuelo",
+  "bbox": "-4.6017309556685655 39.87676308871197 / -3.052819692143307 41.16711639508549",
+  "count": 56935
+ },
+ {
+  "name": "Hidrografia:IDEM_MA_AGUAS_SUB",
+  "title": "Masas de agua subterránea de la Comunidad de Madrid",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "Hidrografia",
+  "bbox": "-4.3613815321346125 39.88768915755558 / -3.0675855363990974 40.88871823000505",
+  "count": 10
+ },
+ {
+  "name": "Zonas:IDEM_MA_MONTES_PRESERVADOS",
+  "title": "Montes Preservados (Anexo Ley 16/1995)",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "Zonas",
+  "bbox": "-4.596464238234793 39.97621479089877 / -3.1044491675968966 41.14575294101363",
+  "count": 700
+ },
+ {
+  "name": "Zonas:IDEM_MA_MONTES_CM",
+  "title": "Montes Propiedad de la Comunidad de Madrid",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "Zonas",
+  "bbox": "-4.340675139466719 40.086684549487856 / -3.2137121850750288 41.16692098495899",
+  "count": 80
+ },
+ {
+  "name": "Zonas:IDEM_MA_MONTES_UP",
+  "title": "Montes del Catálogo de Utilidad Pública de la Comunidad de Madrid",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "Zonas",
+  "bbox": "-4.522502269054415 40.0845077945032 / -3.1465084970723 41.16702948749713",
+  "count": 208
+ },
+ {
+  "name": "Comun:IDEM_V_MUNICIPIOS",
+  "title": "Municipios",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "Comun",
+  "bbox": "-4.601396938289687 39.876864802146216 / -3.052818667400452 41.16711648658971",
+  "count": 179
+ },
+ {
+  "name": "NombresGeograficos:NombresGeograficos",
+  "title": "Nombres Geograficos de la Comunidad de Madrid",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "NombresGeograficos",
+  "bbox": "-4.5964130238390934 39.89126023012686 / -3.056416605340214 41.16435612632482",
+  "count": 21224
+ },
+ {
+  "name": "NombresGeograficos:IDEM_BTA_10M_NOMGEO_PUN_11",
+  "title": "Nombres Geográficos (Puntos). BTA 1:10000 del año 2011",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "NombresGeograficos",
+  "bbox": "-4.166915231754915 39.9783382409327 / -3.2110253220265026 40.79471613926147",
+  "count": 192516
+ },
+ {
+  "name": "BTA:IDEM_BTA_NOMGEO_PUN_17",
+  "title": "Nombres Geográficos BTA",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "BTA",
+  "bbox": "-4.601296098342974 39.873776120343905 / -3.0242069904329485 41.17671775657665",
+  "count": 692399
+ },
+ {
+  "name": "UnidadesAdministrativas:IDEM_GDIE_G_NUCLEO",
+  "title": "Núcleos de Población Comunidad de Madrid",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "UnidadesAdministrativas",
+  "bbox": "-4.601396938289687 39.876864802146216 / -3.052818667400452 41.16711648658971",
+  "count": 1200
+ },
+ {
+  "name": "ServiciosPublicos:IDEM_MA_OFICINAS_COMARCAS",
+  "title": "Oficinas Comarcales del Cuerpo de Agentes Forestales de la Comunidad de Madrid",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ServiciosPublicos",
+  "bbox": "-4.411302138467115 40.16076968565536 / -3.2670695603121693 40.9798441067172",
+  "count": 17
+ },
+ {
+  "name": "UsoDelSuelo:VPLA_V_ORDENANZA_REF_19",
+  "title": "Ordenanzas del planeamiento urbanístico refundido 2019",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "UsoDelSuelo",
+  "bbox": "-4.5146822669928435 40.010909819948495 / -3.0880223915104543 41.13749922309288",
+  "count": 88118
+ },
+ {
+  "name": "UsoDelSuelo:VPLA_V_ORDENANZA_REF_23",
+  "title": "Ordenanzas del planeamiento urbanístico refundido 2023",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "UsoDelSuelo",
+  "bbox": "-4.5146822669928435 40.010909819948495 / -3.0880223915104543 41.13749922309288",
+  "count": 88630
+ },
+ {
+  "name": "UsoDelSuelo:VPLA_V_ORDENANZA",
+  "title": "Ordenanzas en Planeamiento General",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "UsoDelSuelo",
+  "bbox": "-4.5146822669928435 40.010909819948495 / -3.1006030275935417 41.137488575133474",
+  "count": 94381
+ },
+ {
+  "name": "UsoDelSuelo:VPLA_V_ORDENANZA_MODIF",
+  "title": "Ordenanzas en Planeamiento de Desarrollo",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "UsoDelSuelo",
+  "bbox": "-4.513871844639175 40.01091982487333 / -3.0880223915104543 41.136671846996045",
+  "count": 71250
+ },
+ {
+  "name": "UsoDelSuelo:IDEM_V_SUELO_PARCELA",
+  "title": "Parcelas del Portal del Suelo",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "UsoDelSuelo",
+  "bbox": "-4.213089642620624 40.22075484248176 / -3.2178801881417183 40.990012291536395",
+  "count": 555
+ },
+ {
+  "name": "Zonas:IDEM_MA_PNSG_CONOS_DESPEGUE",
+  "title": "Parque Nacional Sierra de Guadarrama - Conos de despegue",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "Zonas",
+  "bbox": "-3.8525078155042385 40.87303204555094 / -3.7625866510388466 40.99997048282465",
+  "count": 3
+ },
+ {
+  "name": "Zonas:IDEM_MA_PNSG_PUN_DESPEGUE",
+  "title": "Parque Nacional Sierra de Guadarrama - Puntos de despegue",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "Zonas",
+  "bbox": "-3.8509991457805337 40.87304313524079 / -3.779948504493111 40.999756056905845",
+  "count": 3
+ },
+ {
+  "name": "Zonas:IDEM_MA_PNSG_VIAL_CICLABLE",
+  "title": "Parque Nacional Sierra de Guadarrama - Viales ciclables",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "Zonas",
+  "bbox": "-4.142029414790526 40.7397439062471 / -3.728047774414742 41.03198540719768",
+  "count": 158
+ },
+ {
+  "name": "Zonas:IDEM_MA_PNSG_ZON_VIVAC_ANUA",
+  "title": "Parque Nacional Sierra de Guadarrama - Zonas de Vivac Anual",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "Zonas",
+  "bbox": "-3.9597309400168874 40.75355896789984 / -3.8631237482822782 40.858816166970605",
+  "count": 5
+ },
+ {
+  "name": "Zonas:IDEM_MA_PNSG_ZONIFICACION",
+  "title": "Parque Nacional Sierra de Guadarrama - Zonificación",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "Zonas",
+  "bbox": "-4.143582744306087 40.73540899067232 / -3.7270568302975433 41.03900033649806",
+  "count": 165
+ },
+ {
+  "name": "Zonas:IDEM_MA_PNSG_AREA_SEN_SOBREV",
+  "title": "Parque Nacional Sierra de Guadarrama - Áreas sensibles al sobrevuelo",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "Zonas",
+  "bbox": "-4.201724886617852 40.72357559819946 / -3.7453134294968375 41.05560273432272",
+  "count": 3
+ },
+ {
+  "name": "Zonas:IDEM_MA_PNSG_ZONAS_ESCALADA",
+  "title": "Parque Nacional Sierra de Guadarrama – Zonas de escalada",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "Zonas",
+  "bbox": "-4.031171102196995 40.737712971547346 / -3.8299712116266065 40.91997997214517",
+  "count": 309
+ },
+ {
+  "name": "Zonas:IDEM_MA_PNSG_CAMINOS",
+  "title": "Parque Nacional Sierra de Guadarrama-Caminos y Senderos Autorizados-ZUR",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "Zonas",
+  "bbox": "-4.100846676319913 40.73603943679087 / -3.726579413715121 41.027563643381505",
+  "count": 678
+ },
+ {
+  "name": "LugaresProtegidos:IDEM_MA_PN_GUADARRAMA_CM",
+  "title": "Parque Nacional de la Sierra de Guadarrama en el Ámbito de la Comunidad de Madrid, a escala 1:10.000",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "LugaresProtegidos",
+  "bbox": "-4.145757583635515 40.71013889954995 / -3.6940632021105255 41.0368862112059",
+  "count": 2
+ },
+ {
+  "name": "LugaresProtegidos:IDEM_MA_PR_CA_MANZANARES",
+  "title": "Parque Regional de la Cuenca Alta del Manzanares",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "LugaresProtegidos",
+  "bbox": "-4.098626831792888 40.472977879465084 / -3.5862282369037835 40.85076585154011",
+  "count": 51
+ },
+ {
+  "name": "LugaresProtegidos:IDEM_MA_PR_SURESTE",
+  "title": "Parque Regional del Sureste",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "LugaresProtegidos",
+  "bbox": "-3.687635855004951 40.08525588421757 / -3.4168531323190763 40.44702889524825",
+  "count": 14
+ },
+ {
+  "name": "LugaresProtegidos:IDEM_MA_PR_GUADARRAMA",
+  "title": "Parque Regional del curso medio del río Guadarrama",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "LugaresProtegidos",
+  "bbox": "-4.056618443148525 40.18851758658647 / -3.871143981380395 40.620247822832745",
+  "count": 3
+ },
+ {
+  "name": "UsoDelSuelo:IDEM_MA_PARQUE_FOREST_PERI",
+  "title": "Parques Forestales Periurbanos de la Comunidad de Madrid",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "UsoDelSuelo",
+  "bbox": "-3.8060776239608223 40.26446447601434 / -3.605787102982429 40.401604863728",
+  "count": 4
+ },
+ {
+  "name": "ZonasRiesgo:PELIGROSID_6_3",
+  "title": "Peligrosidad por Accidentes industriales: nube tóxica",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ZonasRiesgo",
+  "bbox": "-4.601397003503758 39.876865421750516 / -3.052819196533949 41.167116228709865",
+  "count": 36
+ },
+ {
+  "name": "ZonasRiesgo:PELIGROSID_6_5",
+  "title": "Peligrosidad por Accidentes industriales: radiación",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ZonasRiesgo",
+  "bbox": "-4.601397003503758 39.876865421750516 / -3.052819196533949 41.167116228709865",
+  "count": 68
+ },
+ {
+  "name": "ZonasRiesgo:PELIGROSID_6_4",
+  "title": "Peligrosidad por Accidentes industriales: sobrepresión",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ZonasRiesgo",
+  "bbox": "-4.601397003503758 39.876865421750516 / -3.052819196533949 41.167116228709865",
+  "count": 56
+ },
+ {
+  "name": "ZonasRiesgo:PELIGROSID_6_27",
+  "title": "Peligrosidad por Derrumbes y colapso de edificaciones",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ZonasRiesgo",
+  "bbox": "-4.601396938289687 39.876864802146216 / -3.052818667400452 41.16711648658971",
+  "count": 361674
+ },
+ {
+  "name": "ZonasRiesgo:PELIGROSID_6_11",
+  "title": "Peligrosidad por accidentes en centrales energéticas",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ZonasRiesgo",
+  "bbox": "-4.601397003503758 39.876865421750516 / -3.052819196533949 41.167116228709865",
+  "count": 56
+ },
+ {
+  "name": "ZonasRiesgo:PELIGROSID_6_17",
+  "title": "Peligrosidad por accidentes en túneles",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ZonasRiesgo",
+  "bbox": "-4.601397003503758 39.876865421750516 / -3.052819196533949 41.167116228709865",
+  "count": 941
+ },
+ {
+  "name": "ZonasRiesgo:PELIGROSID_6_20",
+  "title": "Peligrosidad por actividades deportivas",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ZonasRiesgo",
+  "bbox": "-4.601397003503758 39.876865421750516 / -3.052819196533949 41.167116228709865",
+  "count": 8477
+ },
+ {
+  "name": "ZonasRiesgo:PELIGROSID_6_6",
+  "title": "Peligrosidad por actividades extractivas",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ZonasRiesgo",
+  "bbox": "-4.601397003503758 39.876865421750516 / -3.052819196533949 41.167116228709865",
+  "count": 150
+ },
+ {
+  "name": "ZonasRiesgo:PELIGROSID_5_2",
+  "title": "Peligrosidad por aludes",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ZonasRiesgo",
+  "bbox": "-4.601397003503758 39.876865421750516 / -3.052819196533949 41.167116228709865",
+  "count": 2555
+ },
+ {
+  "name": "ZonasRiesgo:PELIGROSID_2_1",
+  "title": "Peligrosidad por avenidas y crecidas",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ZonasRiesgo",
+  "bbox": "-4.601345968383365 39.87689314195648 / -3.0528657520031084 41.16711431035544",
+  "count": 108982
+ },
+ {
+  "name": "ZonasRiesgo:PELIGROSID_6_18",
+  "title": "Peligrosidad por concentraciones humanas",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ZonasRiesgo",
+  "bbox": "-4.601345968383365 39.87689314195648 / -3.0528657520031084 41.16711431035544",
+  "count": 18397
+ },
+ {
+  "name": "ZonasRiesgo:PELIGROSID_6_8",
+  "title": "Peligrosidad por contaminación ambiental del agua",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ZonasRiesgo",
+  "bbox": "-4.459505527919075 39.90034643837749 / -3.0675995748217146 41.11888330806503",
+  "count": 443
+ },
+ {
+  "name": "ZonasRiesgo:PELIGROSID_6_7",
+  "title": "Peligrosidad por contaminación ambiental del aire",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ZonasRiesgo",
+  "bbox": "-4.601397003503758 39.876865421750516 / -3.052819196533949 41.167116228709865",
+  "count": 12
+ },
+ {
+  "name": "ZonasRiesgo:PELIGROSID_6_9",
+  "title": "Peligrosidad por contaminación ambiental del suelo",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ZonasRiesgo",
+  "bbox": "-4.601397003503745 39.876865421750516 / -3.052819196533949 41.167116228709865",
+  "count": 99
+ },
+ {
+  "name": "ZonasRiesgo:PELIGROSID_6_10",
+  "title": "Peligrosidad por derrumbes y colapso de infraestructuras",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ZonasRiesgo",
+  "bbox": "-4.601397003503758 39.876865421750516 / -3.052819196533949 41.167116228709865",
+  "count": 520
+ },
+ {
+  "name": "ZonasRiesgo:PELIGROSID_6_19",
+  "title": "Peligrosidad por establecimientos de pública concurrencia",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ZonasRiesgo",
+  "bbox": "-4.601397003503745 39.876865421750516 / -3.052819196533949 41.167116228709865",
+  "count": 13790
+ },
+ {
+  "name": "ZonasRiesgo:PELIGROSID_1_13",
+  "title": "Peligrosidad por granizo",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ZonasRiesgo",
+  "bbox": "-4.601397003503758 39.876865421750516 / -3.052819196533949 41.167116228709865",
+  "count": 2
+ },
+ {
+  "name": "ZonasRiesgo:PELIGROSID_5_3",
+  "title": "Peligrosidad por hundimientos del terreno",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ZonasRiesgo",
+  "bbox": "-4.60139700350372 39.876865421750615 / -3.0528191965339495 41.167116228709865",
+  "count": 1951
+ },
+ {
+  "name": "ZonasRiesgo:PELIGROSID_6_26",
+  "title": "Peligrosidad por incendios urbanos en exterior",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ZonasRiesgo",
+  "bbox": "-4.601397003503758 39.876865421750516 / -3.052819196533949 41.167116228709865",
+  "count": 269877
+ },
+ {
+  "name": "ZonasRiesgo:PELIGROSID_6_25",
+  "title": "Peligrosidad por incendios urbanos en interior",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ZonasRiesgo",
+  "bbox": "-4.601396938289687 39.876864802146216 / -3.052818667400452 41.16711648658971",
+  "count": 361673
+ },
+ {
+  "name": "ZonasRiesgo:PELIGROSID_1_5",
+  "title": "Peligrosidad por lluvias fuertes (1 h)",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ZonasRiesgo",
+  "bbox": "-4.601397003503745 39.876865421750516 / -3.052819196533949 41.167116228709865",
+  "count": 4
+ },
+ {
+  "name": "ZonasRiesgo:PELIGROSID_1_4",
+  "title": "Peligrosidad por lluvias persistentes (12 h)",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ZonasRiesgo",
+  "bbox": "-4.60139700350372 39.876865421750544 / -3.0528191965339366 41.167116228709865",
+  "count": 3
+ },
+ {
+  "name": "ZonasRiesgo:PELIGROSID_5_1",
+  "title": "Peligrosidad por movimientos de ladera",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ZonasRiesgo",
+  "bbox": "-4.601397003503758 39.876865421750516 / -3.052819196533949 41.167116228709865",
+  "count": 92635
+ },
+ {
+  "name": "ZonasRiesgo:PELIGROSID_1_6",
+  "title": "Peligrosidad por nevadas",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ZonasRiesgo",
+  "bbox": "-4.601397003503745 39.876865421750516 / -3.052819196533949 41.167116228709865",
+  "count": 49
+ },
+ {
+  "name": "ZonasRiesgo:PELIGROSID_1_8",
+  "title": "Peligrosidad por niebla",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ZonasRiesgo",
+  "bbox": "-4.601397003503745 39.876865421750516 / -3.052819196533949 41.167116228709865",
+  "count": 6
+ },
+ {
+  "name": "ZonasRiesgo:PELIGROSID_1_9",
+  "title": "Peligrosidad por ola de calor",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ZonasRiesgo",
+  "bbox": "-4.601397003503758 39.876865421750516 / -3.052819196533949 41.167116228709865",
+  "count": 4
+ },
+ {
+  "name": "ZonasRiesgo:PELIGROSID_1_10",
+  "title": "Peligrosidad por ola de frío",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ZonasRiesgo",
+  "bbox": "-4.601397003503758 39.876865421750516 / -3.052819196533949 41.167116228709865",
+  "count": 4
+ },
+ {
+  "name": "ZonasRiesgo:PELIGROSID_1_11",
+  "title": "Peligrosidad por polvo en suspensión",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ZonasRiesgo",
+  "bbox": "-4.601397003503745 39.876865421750516 / -3.052819196533949 41.167116228709865",
+  "count": 2
+ },
+ {
+  "name": "ZonasRiesgo:PELIGROSID_2_3",
+  "title": "Peligrosidad por rotura de presas",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ZonasRiesgo",
+  "bbox": "-4.601397003503758 39.876865421750516 / -3.052819196533949 41.167116228709865",
+  "count": 348
+ },
+ {
+  "name": "ZonasRiesgo:PELIGROSID_1_12",
+  "title": "Peligrosidad por sequías (consumo humano)",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ZonasRiesgo",
+  "bbox": "-4.601397003503758 39.876865421750516 / -3.052819196533949 41.167116228709865",
+  "count": 2185
+ },
+ {
+  "name": "ZonasRiesgo:PELIGROSID_4_1",
+  "title": "Peligrosidad por sismos",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ZonasRiesgo",
+  "bbox": "-4.601397003503758 39.876865421750516 / -3.052819196533949 41.167116228709865",
+  "count": 4
+ },
+ {
+  "name": "ZonasRiesgo:PELIGROSID_5_4",
+  "title": "Peligrosidad por subsidencias",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ZonasRiesgo",
+  "bbox": "-4.601397003503758 39.876865421750516 / -3.052819196533949 41.167116228709865",
+  "count": 428
+ },
+ {
+  "name": "ZonasRiesgo:PELIGROSID_6_23",
+  "title": "Peligrosidad por suministros esenciales: agua",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ZonasRiesgo",
+  "bbox": "-4.601397003503758 39.876865421750516 / -3.052819196533949 41.167116228709865",
+  "count": 106240
+ },
+ {
+  "name": "ZonasRiesgo:PELIGROSID_6_24",
+  "title": "Peligrosidad por suministros esenciales: luz",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ZonasRiesgo",
+  "bbox": "-4.601345968383365 39.87689314195648 / -3.0528657520031084 41.16711431035544",
+  "count": 2209
+ },
+ {
+  "name": "ZonasRiesgo:PELIGROSID_1_1",
+  "title": "Peligrosidad por temperaturas máximas",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ZonasRiesgo",
+  "bbox": "-4.601397003503745 39.876865421750516 / -3.052819196533949 41.167116228709865",
+  "count": 19
+ },
+ {
+  "name": "ZonasRiesgo:PELIGROSID_1_2",
+  "title": "Peligrosidad por temperaturas mínimas",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ZonasRiesgo",
+  "bbox": "-4.601397003503758 39.876865421750516 / -3.052819196533949 41.167116228709865",
+  "count": 18
+ },
+ {
+  "name": "ZonasRiesgo:PELIGROSID_5_5",
+  "title": "Peligrosidad por terrenos expansivos",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ZonasRiesgo",
+  "bbox": "-4.601397003503758 39.876865421750516 / -3.052819196533949 41.167116228709865",
+  "count": 6221
+ },
+ {
+  "name": "ZonasRiesgo:PELIGROSID_1_7",
+  "title": "Peligrosidad por tormentas",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ZonasRiesgo",
+  "bbox": "-4.601397003503758 39.876865421750516 / -3.052819196533949 41.167116228709865",
+  "count": 20
+ },
+ {
+  "name": "ZonasRiesgo:PELIGROSID_2_2",
+  "title": "Peligrosidad por torrencialidad en cauces",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ZonasRiesgo",
+  "bbox": "-4.601396938289687 39.876864802146216 / -3.052818667400452 41.16711648658971",
+  "count": 961
+ },
+ {
+  "name": "ZonasRiesgo:PELIGROSID_6_14",
+  "title": "Peligrosidad por transporte civil por avión",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ZonasRiesgo",
+  "bbox": "-4.601397003503758 39.876865421750516 / -3.052819196533949 41.167116228709865",
+  "count": 181
+ },
+ {
+  "name": "ZonasRiesgo:PELIGROSID_6_16",
+  "title": "Peligrosidad por transporte civil por carretera",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ZonasRiesgo",
+  "bbox": "-4.601345968383365 39.87689314195648 / -3.0528657520031084 41.16711431035544",
+  "count": 90544
+ },
+ {
+  "name": "ZonasRiesgo:PELIGROSID_6_15",
+  "title": "Peligrosidad por transporte civil por tren",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ZonasRiesgo",
+  "bbox": "-4.601397003503745 39.876865421750516 / -3.052819196533949 41.167116228709865",
+  "count": 716
+ },
+ {
+  "name": "ZonasRiesgo:PELIGROSID_6_12",
+  "title": "Peligrosidad por transporte de energía",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ZonasRiesgo",
+  "bbox": "-4.601397003503758 39.876865421750516 / -3.052819196533949 41.167116228709865",
+  "count": 86
+ },
+ {
+  "name": "ZonasRiesgo:PELIGROSID_6_2",
+  "title": "Peligrosidad por transporte de mercancías peligrosas por carretera",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ZonasRiesgo",
+  "bbox": "-4.601397003503758 39.876865421750516 / -3.052819196533949 41.167116228709865",
+  "count": 220
+ },
+ {
+  "name": "ZonasRiesgo:PELIGROSID_6_1",
+  "title": "Peligrosidad por transporte de mercancías peligrosas por ferrocarril",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ZonasRiesgo",
+  "bbox": "-4.601397003503758 39.876865421750516 / -3.052819196533949 41.167116228709865",
+  "count": 18
+ },
+ {
+  "name": "ZonasRiesgo:PELIGROSID_1_3",
+  "title": "Peligrosidad por vientos fuertes",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ZonasRiesgo",
+  "bbox": "-4.60139700350372 39.876865421750544 / -3.0528191965338536 41.167116228709865",
+  "count": 6
+ },
+ {
+  "name": "RegionesBiogeograficas:IDEM_MA_PISOS_BIOCLIMA",
+  "title": "Pisos Bioclimáticos de la Comunidad de Madrid",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "RegionesBiogeograficas",
+  "bbox": "-4.599953681494408 39.87764807916154 / -3.0532243747765393 41.16701479103818",
+  "count": 7
+ },
+ {
+  "name": "Zonas:IDEM_MA_PORN_S_GUADARRAMA",
+  "title": "Plan de Ordenación de los Recursos Naturales de la Sierra de Guadarrama",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "Zonas",
+  "bbox": "-4.334718634282516 40.54752970488614 / -3.5765826790909556 41.16044098218159",
+  "count": 36
+ },
+ {
+  "name": "Zonas:IDEM_MA_RED_NATURA_PLAN",
+  "title": "Planes de Gestión de Espacios Protegidos Red Natura 2000 de la Comunidad de Madrid",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "Zonas",
+  "bbox": "-4.601149062063659 39.876940638562616 / -3.0675778909108633 41.15691654629737",
+  "count": 215
+ },
+ {
+  "name": "Zonas:IDEM_MA_PLANES_EMBALSES",
+  "title": "Planes de Ordenación de los Embalses de la Comunidad de Madrid",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "Zonas",
+  "bbox": "-4.327043116609888 40.330757529819586 / -3.463380016327349 41.039003976741846",
+  "count": 325
+ },
+ {
+  "name": "UnidadesAdministrativas:IDEM_ES_PROVINCIAS",
+  "title": "Provincias",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "UnidadesAdministrativas",
+  "bbox": "-21.27009351924182 27.47098086171811 / 4.734864015567936 43.89432144451025",
+  "count": 51
+ },
+ {
+  "name": "ServiciosPublicos:IDEM_BTA_10M_PUNTOSREF_PUN_11",
+  "title": "Puntos de Referencia (Puntos). BTA 1:10000 del año 2011",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ServiciosPublicos",
+  "bbox": "-4.161321128652634 39.9787877282875 / -3.218094128159656 40.79112776497631",
+  "count": 5449
+ },
+ {
+  "name": "BTA:IDEM_BTA_PUNTOSREF_PUN_17",
+  "title": "Puntos de Referencia Puntos",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "BTA",
+  "bbox": "-4.585806454380927 39.9092566725553 / -3.002052870731728 41.16630716752612",
+  "count": 5537
+ },
+ {
+  "name": "RedesTransporte:IDEM_BTA_10M_REDFERRO_LIN_11",
+  "title": "Red Ferroviaria (Líneas). BTA 1:10000 del año 2011",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "RedesTransporte",
+  "bbox": "-4.161552647287564 40.00428621347549 / -3.290977159640538 40.794619832357625",
+  "count": 2900
+ },
+ {
+  "name": "RedesTransporte:IDEM_BTA_10M_REDFERRO_PUN_11",
+  "title": "Red Ferroviaria (Puntos). BTA 1:10000 del año 2011",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "RedesTransporte",
+  "bbox": "-4.15960252182117 40.00499570249835 / -3.2964567295605764 40.792688568825476",
+  "count": 363
+ },
+ {
+  "name": "BTA:IDEM_BTA_REDFERRO_LIN_17",
+  "title": "Red Ferroviaria Lineas",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "BTA",
+  "bbox": "-4.3238920067212865 39.9039872444434 / -3.2078878879399957 41.16228859053257",
+  "count": 7777
+ },
+ {
+  "name": "BTA:IDEM_BTA_REDFERRO_PUN_17",
+  "title": "Red Ferroviaria Puntos",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "BTA",
+  "bbox": "-4.3201510572498 39.913082124460814 / -3.211804571493519 41.10593641778222",
+  "count": 462
+ },
+ {
+  "name": "LugaresProtegidos:IDEM_MA_RED_NATURA_LIC_ZEC",
+  "title": "Red Natura 2000. Lugares de Importancia Comunitaria y Zonas Especiales de Conservación (LIC_ES30)",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "LugaresProtegidos",
+  "bbox": "-4.601149062081444 39.876940638562395 / -3.0675778909108633 41.15691654629737",
+  "count": 7
+ },
+ {
+  "name": "LugaresProtegidos:IDEM_MA_RED_NATURA_ZEPA",
+  "title": "Red Natura 2000. Zonas de Especial Protección para las Aves (ZEPA_ES30)",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "LugaresProtegidos",
+  "bbox": "-4.596101118462338 39.876940638562395 / -3.2812380399870227 40.9479380437185",
+  "count": 7
+ },
+ {
+  "name": "RedesTransporte:IDEM_BTA_10M_REDVIARIA_LIN_11",
+  "title": "Red Viaria (Líneas). BTA 1:10000 del año 2011",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "RedesTransporte",
+  "bbox": "-4.1615595998337485 39.97848542050054 / -3.2108229902319185 40.79479806355347",
+  "count": 1353836
+ },
+ {
+  "name": "RedesTransporte:IDEM_BTA_10M_REDVIARIA_POL_11",
+  "title": "Red Viaria (Polígonos). BTA 1:10000 del año 2011",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "RedesTransporte",
+  "bbox": "-4.161552647287564 39.978485488528534 / -3.2108229902319185 40.79479806355347",
+  "count": 7481
+ },
+ {
+  "name": "RedesTransporte:IDEM_BTA_10M_REDVIARIA_PUN_11",
+  "title": "Red Viaria (Puntos). BTA 1:10000 del año 2011",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "RedesTransporte",
+  "bbox": "-4.160088314993936 39.97948515488235 / -3.2171167920544628 40.794016880259484",
+  "count": 1735
+ },
+ {
+  "name": "BTA:IDEM_BTA_REDVIARIA_LIN_17",
+  "title": "Red Viaria Lineas",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "BTA",
+  "bbox": "-4.598941993444253 39.8768304940497 / -3.0565941262073735 41.16706743023512",
+  "count": 1520072
+ },
+ {
+  "name": "BTA:IDEM_BTA_REDVIARIA_POL_17",
+  "title": "Red Viaria Poligonos",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "BTA",
+  "bbox": "-4.590417831952655 39.877240555463544 / -3.0723697014966236 41.16702222477606",
+  "count": 19068
+ },
+ {
+  "name": "BTA:IDEM_BTA_REDVIARIA_PUN_17",
+  "title": "Red Viaria Puntos",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "BTA",
+  "bbox": "-4.587836132347994 39.97464529830088 / -3.0848339044692383 41.154771641309594",
+  "count": 4138
+ },
+ {
+  "name": "ServiciosPublicos:IDEM_MA_RED_CEAMBIENTAL",
+  "title": "Red de Centros de Educación Ambiental de la Comunidad de Madrid",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ServiciosPublicos",
+  "bbox": "-4.217522795569181 40.29452020400722 / -3.4836539559037956 41.10366377548252",
+  "count": 8
+ },
+ {
+  "name": "Zonas:IDEM_MA_VIAS_PECUARIAS",
+  "title": "Red de Vías Pecuarias de la Comunidad de Madrid",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "Zonas",
+  "bbox": "-4.55367522680439 39.896387430491245 / -3.108358941735116 41.16321512560477",
+  "count": 1694
+ },
+ {
+  "name": "Elevaciones:IDEM_BTA_10M_RELIEVE_LIN_11",
+  "title": "Relieve (Líneas) de la BTA 1:10.000 del año 2011",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "Elevaciones",
+  "bbox": "-4.161552647287564 39.978485488528534 / -3.2108229902319185 40.79479806355347",
+  "count": 64127
+ },
+ {
+  "name": "Elevaciones:IDEM_BTA_10M_RELIEVE_PUN_11",
+  "title": "Relieve (Puntos)de la BTA 1:10.000 del año 2011",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "Elevaciones",
+  "bbox": "-4.161531071064236 39.97850637279269 / -3.211452005333877 40.794531134099365",
+  "count": 124600
+ },
+ {
+  "name": "BTA:IDEM_BTA_RELIEVE_LIN_17",
+  "title": "Relieve Lineas",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "BTA",
+  "bbox": "-4.601579846081402 39.877173770856494 / -3.0528137034717453 41.16720891897769",
+  "count": 135448
+ },
+ {
+  "name": "BTA:IDEM_BTA_RELIEVE_PUN_17",
+  "title": "Relieve Puntos",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "BTA",
+  "bbox": "-4.599151143037341 39.87715646740858 / -3.05459803609878 41.16709545508754",
+  "count": 218321
+ },
+ {
+  "name": "Zonas:IDEM_MA_RESERVA_CAZA_SONSAZ",
+  "title": "Reserva Nacional de Caza de Sonsaz en la Comunidad de Madrid",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "Zonas",
+  "bbox": "-3.5480223001820477 40.90814082211918 / -3.393905964789753 41.15025757912172",
+  "count": 1
+ },
+ {
+  "name": "UsoDelSuelo:IDEM_URB_SIOSE_POLIGONOS_05",
+  "title": "SIOSE 2005",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "UsoDelSuelo",
+  "bbox": "-4.601397486911812 39.8769401780383 / -3.052820549843502 41.16711293567841",
+  "count": 43931
+ },
+ {
+  "name": "UsoDelSuelo:IDEM_URB_SIOSE_POLIGONOS_09",
+  "title": "SIOSE 2009",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "UsoDelSuelo",
+  "bbox": "-4.601397153924209 39.876940632740016 / -3.0528198952151153 41.16711276483893",
+  "count": 44461
+ },
+ {
+  "name": "UsoDelSuelo:IDEM_URB_SIOSE_POLIGONOS_11",
+  "title": "SIOSE 2011",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "UsoDelSuelo",
+  "bbox": "-4.6013971539310425 39.87694059285163 / -3.0528198940527242 41.16711272408439",
+  "count": 44638
+ },
+ {
+  "name": "UsoDelSuelo:IDEM_URB_SIOSE_POLIGONOS_14",
+  "title": "SIOSE 2014",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "UsoDelSuelo",
+  "bbox": "-4.6013972003882975 39.87694089151232 / -3.0528198942446565 41.16711276483948",
+  "count": 44858
+ },
+ {
+  "name": "UnidadesAdministrativas:IDEM_GDIE_G_SECCION",
+  "title": "Secciones censales de la Comunidad de Madrid",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "UnidadesAdministrativas",
+  "bbox": "-4.601396938289687 39.876864802146216 / -3.052818667400452 41.16711648658971",
+  "count": 4518
+ },
+ {
+  "name": "RedesTransporte:IDEM_V_MA_SENDAS_VERDES",
+  "title": "Sendas por la naturaleza de la Comunidad de Madrid",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "RedesTransporte",
+  "bbox": "-4.5450972032571215 40.06249135470994 / -3.1048170400272137 41.09048681982315",
+  "count": 224
+ },
+ {
+  "name": "ServiciosPublicos:IDEM_BTA_10M_SERVINST_LIN_11",
+  "title": "Servicios e Instalaciones (Líneas). BTA 1:10000 del año 2011",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ServiciosPublicos",
+  "bbox": "-4.161552647287564 40.00288186872271 / -3.2461255729205267 40.7947266588665",
+  "count": 9931
+ },
+ {
+  "name": "ServiciosPublicos:IDEM_BTA_10M_SERVINST_POL_11",
+  "title": "Servicios e Instalaciones (Polígonos). BTA 1:10000 del año 2011",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ServiciosPublicos",
+  "bbox": "-4.159170033038586 40.0146695138962 / -3.2461678439312 40.7947266588665",
+  "count": 939
+ },
+ {
+  "name": "ServiciosPublicos:IDEM_BTA_10M_SERVINST_PUN_11",
+  "title": "Servicios e Instalaciones (Puntos). BTA 1:10000 del año 2011",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ServiciosPublicos",
+  "bbox": "-4.153831172574253 39.99422426194923 / -3.220667003705196 40.783182666563526",
+  "count": 1018
+ },
+ {
+  "name": "BTA:IDEM_BTA_SERVINST_LIN_17",
+  "title": "Servicios e Instalaciones Lineas",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "BTA",
+  "bbox": "-4.558916563376327 39.87844771242432 / -3.063510360891567 41.16127155669329",
+  "count": 42734
+ },
+ {
+  "name": "BTA:IDEM_BTA_SERVINST_POL_17",
+  "title": "Servicios e Instalaciones Poligonos",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "BTA",
+  "bbox": "-4.531960833824085 39.892563019992046 / -3.0839438421608096 41.15408763299359",
+  "count": 7304
+ },
+ {
+  "name": "BTA:IDEM_BTA_SERVINST_PUN_17",
+  "title": "Servicios e Instalaciones Puntos",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "BTA",
+  "bbox": "-4.527015690423311 39.99011522933057 / -3.085283337027599 41.15326247382227",
+  "count": 2023
+ },
+ {
+  "name": "UsoDelSuelo:VPLA_V_RED",
+  "title": "Sistemas y Redes Públicas en Planeamiento General",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "UsoDelSuelo",
+  "bbox": "-4.5145962717124775 39.901656959578595 / -3.068410774802731 41.13751292204473",
+  "count": 42317
+ },
+ {
+  "name": "UsoDelSuelo:VPLA_V_RED_MODIF",
+  "title": "Sistemas y Redes Públicas en Planeamiento de Desarrollo",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "UsoDelSuelo",
+  "bbox": "-4.511022074002157 40.01216214889395 / -3.0880239421620934 41.136671846996045",
+  "count": 27305
+ },
+ {
+  "name": "UsoDelSuelo:VPLA_V_RED_REF_19",
+  "title": "Sistemas y Redes Públicas en el Planeamiento Urbanístico Refundido 2019",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "UsoDelSuelo",
+  "bbox": "-4.5145962717124775 39.901656959578595 / -3.068410774802731 41.13751292204473",
+  "count": 43007
+ },
+ {
+  "name": "UsoDelSuelo:VPLA_V_RED_REF_23",
+  "title": "Sistemas y Redes Rúblicas en el Planeamiento Urbanístico Refundido 2023",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "UsoDelSuelo",
+  "bbox": "-4.5145962717124775 39.901656959578595 / -3.068410774802731 41.13751292204473",
+  "count": 43319
+ },
+ {
+  "name": "UsoDelSuelo:elucm_ExistingLandUseDataObject",
+  "title": "Suelo Vacante y Ocupado de la Comunidad de Madrid 2016",
+  "crs": "urn:ogc:def:crs:EPSG::4258",
+  "ws": "UsoDelSuelo",
+  "bbox": "-4.56775426864624 40.01884078886563 / -3.08829140663147 41.13606643583273",
+  "count": 175323
+ },
+ {
+  "name": "Suelo:IDEM_MA_CLASIF_SUELOS_98",
+  "title": "Suelos (Sistemática Soil Taxonomy 1998) de la Comunidad de Madrid",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "Suelo",
+  "bbox": "-4.601730937318062 39.876860537352044 / -3.052819763446812 41.167115494289845",
+  "count": 3624
+ },
+ {
+  "name": "Comun:IDEM_TOPONIMO",
+  "title": "Topónimos",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "Comun",
+  "bbox": "-4.598340427805119 39.87708987208265 / -3.056222373494733 41.16604635848641",
+  "count": 36640
+ },
+ {
+  "name": "Zonas:IDEM_MA_PESCA_VEDA_CUENTRA",
+  "title": "Tramos de cuencas vedadas",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "Zonas",
+  "bbox": "-4.332194057050386 40.553747635115336 / -3.398048430430689 41.16543553947302",
+  "count": 7
+ },
+ {
+  "name": "ServiciosPublicos:IDEM_MA_MANCOM_RESIDUOS",
+  "title": "Tratamiento de Residuos Domésticos. Mancomunidades de Tratamiento y Ayuntamiento de Madrid",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ServiciosPublicos",
+  "bbox": "-4.6013972934918455 39.876864976625676 / -3.0528198371333937 41.16711639505206",
+  "count": 194
+ },
+ {
+  "name": "UsoDelSuelo:IDEM_MA_UNIDADES_PAISAJE",
+  "title": "Unidades de Paisaje de la Comunidad de Madrid",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "UsoDelSuelo",
+  "bbox": "-4.601730937318062 39.876860537352044 / -3.052819763446812 41.167115494289845",
+  "count": 176
+ },
+ {
+  "name": "UsoDelSuelo:CM_ExistingLandUseDataObject",
+  "title": "Usos del suelo urbano y urbanizable ocupado de la Comunidad de Madrid 2016",
+  "crs": "urn:ogc:def:crs:EPSG::4258",
+  "ws": "UsoDelSuelo",
+  "bbox": "-4.56603288650513 40.018909493397146 / -3.08829140663147 41.13606647655532",
+  "count": 117814
+ },
+ {
+  "name": "Zonas:IDEM_MA_PESCA_VEDADOS",
+  "title": "Vedados de Pesca",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "Zonas",
+  "bbox": "-4.399930784797374 39.92184260083989 / -3.1373395557072876 41.14838903618894",
+  "count": 72
+ },
+ {
+  "name": "RedesTransporte:IDEM_GDIE_G_CALLES",
+  "title": "Viales urbanos de la Comunidad de Madrid",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "RedesTransporte",
+  "bbox": "-4.59000464867935 39.87728929830827 / -3.0594409649526417 41.16283110157687",
+  "count": 48841
+ },
+ {
+  "name": "Zonas:IDEM_MA_PESCA_ZTRUCHERA",
+  "title": "Zona truchera de la Comunidad de Madrid",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "Zonas",
+  "bbox": "-4.334824482458202 40.55310470758932 / -3.3918544500317935 41.16645016319576",
+  "count": 1
+ },
+ {
+  "name": "Zonas:IDEM_MA_ZONAS_VULNERAB",
+  "title": "Zonas Vulnerables a la Contaminación por Nitratos",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "Zonas",
+  "bbox": "-4.365434603034084 39.89064086178901 / -3.1045734533762537 40.63209138610344",
+  "count": 6
+ },
+ {
+  "name": "InstalacionesMedioAmbiente:IDEM_MA_ZONAS_CALIDAD_AIRE",
+  "title": "Zonas de Calidad del Aire",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "InstalacionesMedioAmbiente",
+  "bbox": "-4.601730937318062 39.876860540054025 / -3.052819763448888 41.167115494289845",
+  "count": 180
+ },
+ {
+  "name": "Zonas:IDEM_MA_CAZA_CONTROLADA",
+  "title": "Zonas de Caza Controlada en la Comunidad de Madrid",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "Zonas",
+  "bbox": "-4.394829640748861 40.310388327758844 / -3.454175234563268 41.16620519622662",
+  "count": 35
+ },
+ {
+  "name": "Zonas:IDEM_MA_PESCA_CONTROL_P",
+  "title": "Zonas de Pesca Controlada Inicio-Fin",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "Zonas",
+  "bbox": "-4.32102357868445 40.48177013132369 / -3.42145451555435 41.14079422101085",
+  "count": 18
+ },
+ {
+  "name": "Zonas:IDEM_MA_PESCA_EXPERIM_P",
+  "title": "Zonas de Pesca Experimental Inicio-Fin",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "Zonas",
+  "bbox": "-3.6491833409968946 40.984859176938166 / -3.5795715729259427 41.04348826024041",
+  "count": 4
+ },
+ {
+  "name": "Zonas:IDEM_MA_PESCA_CONTROL",
+  "title": "Zonas de pesca controlada",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "Zonas",
+  "bbox": "-3.6501140320009395 40.0303107756452 / -3.604857358324261 40.04519634658033",
+  "count": 5
+ },
+ {
+  "name": "Zonas:IDEM_MA_PESCA_EXPERIM",
+  "title": "Zonas de pesca experimental en la Comunidad de Madrid",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "Zonas",
+  "bbox": "-3.6498354648355926 40.98485626384433 / -3.5795715729259427 41.05712147974972",
+  "count": 2
+ },
+ {
+  "name": "Zonas:IDEM_MA_RESERVA_BIOS_ZONA",
+  "title": "Zonificación de las Reservas de la Biosfera en la Comunidad de Madrid",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "Zonas",
+  "bbox": "-4.182023174581844 40.47291946667352 / -3.391378803656375 41.15025920767866",
+  "count": 6
+ },
+ {
+  "name": "UsoDelSuelo:VPLA_V_AMBITO",
+  "title": "Ámbitos y Sectores de gestión urbanística en Planeamiento General",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "UsoDelSuelo",
+  "bbox": "-4.513666583120909 39.94219055483615 / -3.0898607440993135 41.1369591390261",
+  "count": 5937
+ },
+ {
+  "name": "UsoDelSuelo:VPLA_V_AMBITO_MODIF",
+  "title": "Ámbitos y Sectores de gestión urbanística en Planeamiento de Desarrollo",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "UsoDelSuelo",
+  "bbox": "-4.510918393126148 40.01031040638384 / -3.0880215708157817 41.108273487257044",
+  "count": 3722
+ },
+ {
+  "name": "UsoDelSuelo:VPLA_V_AMBITO_REF_19",
+  "title": "Ámbitos y sectores de gestión del planeamiento urbanístico refundido 2019",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "UsoDelSuelo",
+  "bbox": "-4.513666583120909 39.94219055483615 / -3.0879341969510774 41.136960679041685",
+  "count": 5477
+ },
+ {
+  "name": "UsoDelSuelo:VPLA_V_AMBITO_REF_23",
+  "title": "Ámbitos y sectores de gestión del planeamiento urbanístico refundido 2023",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "UsoDelSuelo",
+  "bbox": "-4.513666583120909 39.94219055483615 / -3.0879341969510774 41.136960679041685",
+  "count": 5503
+ },
+ {
+  "name": "Zonas:IDEM_MA_PN_GUADARRAMA_INF_CM",
+  "title": "Área de Influencia Socioeconómica del Parque Nacional de la Sierra de Guadarrama",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "Zonas",
+  "bbox": "-4.180010812160719 40.62849687388068 / -3.675665478606337 41.03656018891696",
+  "count": 1
+ },
+ {
+  "name": "ServiciosPublicos:IDEM_MA_AREAS_RECREA",
+  "title": "Áreas Recreativas gestionadas por la CM",
+  "crs": "urn:ogc:def:crs:EPSG::25830",
+  "ws": "ServiciosPublicos",
+  "bbox": "-4.524274730095866 40.010794627234034 / -3.233875774850348 41.111369202225944",
+  "count": 84
+ }
+]

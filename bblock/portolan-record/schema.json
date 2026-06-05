@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://portolan-sdi.github.io/bblocks/portolan-record/schema.json",
+  "title": "Portolan Record Extension",
+  "description": "Namespaced (portolan:) properties added to an OGC API - Records record or STAC item to describe cloud-native access and provenance. All optional; additionalProperties is true so the host record/item is unaffected.",
+  "type": "object",
+  "properties": {
+    "portolan:iceberg_endpoint": {
+      "type": "string",
+      "format": "uri",
+      "description": "Apache Iceberg REST catalog endpoint to ATTACH (static, anonymous)."
+    },
+    "portolan:iceberg_table": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_]+\\.[A-Za-z0-9_]+$",
+      "description": "Fully-qualified table within the catalog, as namespace.table (e.g. v2.hsy_zoning)."
+    },
+    "portolan:access": {
+      "type": "string",
+      "enum": ["iceberg_scan", "attach", "read_parquet", "read_raquet", "download"],
+      "description": "Primary recommended access method for this distribution."
+    },
+    "portolan:source_repo": {
+      "type": "string",
+      "format": "uri",
+      "description": "The git repository that is the source of truth for this catalog/dataset."
+    },
+    "portolan:provenance": {
+      "type": "object",
+      "description": "Lineage: where the data came from and how it was processed.",
+      "properties": {
+        "source": { "type": "string" },
+        "source_provider": { "type": "string" },
+        "source_license": { "type": "string" },
+        "processing": { "type": "string" },
+        "processed_by": { "type": "string" },
+        "processed": { "type": "string" }
+      },
+      "required": ["source", "processing"],
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

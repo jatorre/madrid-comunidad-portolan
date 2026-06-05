@@ -1,0 +1,20 @@
+{
+  "@context": {
+    "portolan": "https://portolan-sdi.github.io/def/portolan#",
+    "portolan:iceberg_endpoint": { "@id": "portolan:icebergEndpoint", "@type": "@id" },
+    "portolan:iceberg_table": { "@id": "portolan:icebergTable" },
+    "portolan:access": { "@id": "portolan:access" },
+    "portolan:source_repo": { "@id": "portolan:sourceRepo", "@type": "@id" },
+    "portolan:provenance": {
+      "@id": "portolan:provenance",
+      "@context": {
+        "source": "portolan:provSource",
+        "source_provider": "portolan:provSourceProvider",
+        "source_license": "portolan:provSourceLicense",
+        "processing": "portolan:provProcessing",
+        "processed_by": "portolan:provProcessedBy",
+        "processed": "portolan:provProcessed"
+      }
+    }
+  }
+}

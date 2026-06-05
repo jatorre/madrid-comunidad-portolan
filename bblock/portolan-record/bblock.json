@@ -1,0 +1,18 @@
+{
+  "name": "Portolan Record Extension",
+  "abstract": "Namespaced properties that Portolan adds to an OGC API - Records record (or a STAC item) to describe cloud-native access — an Apache Iceberg REST endpoint and table, the access method, the source repository — and dataset provenance. Designed to be carried as additional properties on a record-core record without altering it.",
+  "status": "under-development",
+  "dateTimeAddition": "2026-06-03T00:00:00Z",
+  "itemClass": "schema",
+  "register": "portolan-bblocks",
+  "version": "0.1.0",
+  "dateOfLastChange": "2026-06-03",
+  "dependsOn": ["ogc.api.records.v1.0.record-core"],
+  "maturity": "experimental",
+  "scope": "unstable",
+  "schema": "schema.json",
+  "ldContext": "context.jsonld",
+  "sources": [
+    { "title": "OGC API - Records - Part 1: Core", "link": "https://docs.ogc.org/is/20-004r1/20-004r1.html" }
+  ]
+}

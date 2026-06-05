@@ -1,0 +1,12 @@
+# Data bytes live on the bucket, NOT in git (see README).
+# Git tracks only the catalog definition: STAC + Iceberg metadata (metadata.json + manifests).
+data/**/data/
+*.parquet
+
+# Raster bytes live on the bucket too
+data/cog/
+*.tif
+*.tiff
+*.geojson
+# local conversion staging
+.staging/

@@ -1,0 +1,15 @@
+{
+  "publisher": "Example Publisher",
+  "alias": "example",
+  "flag": "🏳️",
+  "repo": "https://github.com/jatorre/portolan-example-catalog",
+  "s3_endpoint": "https://8et4c.upcloudobjects.com",
+  "bucket_path": "carto-ogc-connect-helsinki/repo/portolan-example-catalog",
+  "public_base": "https://8et4c.upcloudobjects.com/carto-ogc-connect-helsinki/repo/portolan-example-catalog",
+  "mc_alias": "upcloud",
+  "rest_prefix": "sdi",
+  "data_provider": "Example Data Provider",
+  "data_license": "CC-BY-4.0",
+  "contributions_repo": "https://github.com/jatorre/portolan-example-catalog",
+  "contributions_issues_url": "https://github.com/jatorre/portolan-example-catalog/issues"
+}
