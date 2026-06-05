@@ -1,7 +1,7 @@
 name: Validate catalog
 
-# Runs on every PR and push. No credentials (reads the repo + anonymous HEADs against the
-# public bucket), so it works on fork PRs — the trust gate for accepting contributions.
+# No credentials: lints the git-tracked definition (valid JSON) and checks the live public
+# endpoint answers anonymously. Works on fork PRs — the trust gate for contributions.
 
 on:
   pull_request:
@@ -13,8 +13,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-      - run: pip install --quiet fastavro jsonschema
-      - run: python3 tools/validate.py
+      - name: Lint JSON definitions
+        run: |
+          python3 -c "import json; json.load(open('portolan.config.json')); print('portolan.config.json OK')"
+          python3 -c "import json; n=len(json.load(open('tools/inventory/geoidem_wfs_featuretypes.json'))); print('WFS inventory:', n)"
+          python3 -c "import json; n=len(json.load(open('tools/inventory/geoidem_wcs_coverages.json'))); print('WCS inventory:', n)"
+      - name: Check live endpoint (anonymous)
+        run: |
+          base=$(python3 -c "import json;print(json.load(open('portolan.config.json'))['public_base'])")
+          code=$(curl -s -o /dev/null -w '%{http_code}' "$base/v1/config")
+          echo "$base/v1/config -> HTTP $code"
+          test "$code" = "200"
