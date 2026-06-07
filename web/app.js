@@ -1,4 +1,4 @@
-import * as duckdb from "https://cdn.jsdelivr.net/npm/@duckdb/duckdb-wasm@1.29.0/+esm";
+import * as duckdb from "https://cdn.jsdelivr.net/npm/@duckdb/duckdb-wasm@1.32.0/+esm";
 
 const CFG = window.CATALOG;                 // {title, base, attribution}
 const app = document.getElementById("app");
@@ -25,7 +25,7 @@ async function db(){
 async function q(sql){ const {c}=await db(); const r=await c.query(sql); return r.toArray().map(x=>x.toJSON()); }
 
 let INDEX=null;
-async function idx(){ if(!INDEX) INDEX=await getJSON("index.json"); return INDEX; }
+async function idx(){ if(!INDEX) INDEX=await getJSON("index.json?v=3"); return INDEX; }
 function param(){ return new URL(location.href).searchParams.get("ds"); }
 function go(h){ history.pushState({},"",h); route(); }
 document.addEventListener("click",e=>{const a=e.target.closest("a[data-nav]");if(a){e.preventDefault();go(a.getAttribute("href"));}});
@@ -70,6 +70,7 @@ async function detail(ds){
   const e=ix.datasets.find(d=>d.id===ds)||{id:ds,type:"table",crs:"4326",parquet:`v3/${ds}/data/${ds}.parquet`,meta:`v3/${ds}/metadata/v1.metadata.json`};
   const type=e.type, epsg=String(e.crs||"4326"), isVec=type==="vector", isRas=type==="raster";
   const pqUrl=dataURL(e.parquet||`v3/${ds}/data/${ds}.parquet`);
+  const previewUrl=dataURL(e.preview||e.parquet||`v3/${ds}/data/${ds}.parquet`); // concreto (sin glob) para el preview en navegador
   const metaUrl=dataURL(e.meta||`v3/${ds}/metadata/v1.metadata.json`);
   const cogUrl=e.cog?dataURL(e.cog):null;
   const tname=ds.replace(/[^a-z0-9_]/gi,"_");
@@ -101,18 +102,19 @@ async function detail(ds){
       <h2>DuckDB</h2><pre class="code"><button class="copy">copiar</button>${esc(duckSnip)}</pre>
       <h2>Snowflake (Iceberg externo)</h2><pre class="code"><button class="copy">copiar</button>${esc(sfSnip)}</pre>`,
     fields:`<h2>Campos</h2><div class="data-table-wrap"><table class="data fields" id="ft"><thead><tr><th>columna</th><th>tipo</th><th>descripción</th></tr></thead><tbody><tr><td colspan=3 class="muted">cargando…</td></tr></tbody></table></div>`,
-    table:`<div class="data-table-wrap"><table class="data" id="dt"><thead></thead><tbody><tr><td class="muted"><span class="spin"></span> consultando parquet en el navegador…</td></tr></tbody></table></div><p class="count-note">Primeras 100 filas (DuckDB-WASM).</p>`,
+    table:`<div class="data-table-wrap"><table class="data" id="dt"><thead></thead><tbody><tr><td class="muted"><span class="spin"></span> consultando parquet en el navegador…</td></tr></tbody></table></div><p class="count-note">Primeras 100 filas (DuckDB-WASM).${e.partitioned?" Muestra de una partición (provincia).":""}</p>`,
     map: isRas?`<p class="muted">Ráster COG: ábrelo en QGIS o un visor COG: <a href="${cogUrl}">${esc(ds)}.tif</a></p>`
-      :`<div id="map"></div><p class="count-note">Hasta 2.000 geometrías de muestra${epsg!=="4326"?", reproyectadas a 4326":""}.</p>`
+      :`<div id="map"></div><p class="count-note">Hasta 2.000 geometrías de muestra${epsg!=="4326"?", reproyectadas a 4326":""}${e.partitioned?" · de una sola provincia (preview)":""}.</p>`
   };
   const pane=document.getElementById("pane");
-  let mapDone=false, tabDone=false, fieldsCache=null;
-  const loadFields=async()=>{ if(fieldsCache)return fieldsCache; try{const m=await getJSON(metaUrl);const sc=m.schemas?m.schemas.find(s=>s["schema-id"]===m["current-schema-id"]):m.schema;fieldsCache=sc.fields;}catch(e){fieldsCache=[];}return fieldsCache;};
+  let mapDone=false, tabDone=false, fieldsCache=null, metaCache=null;
+  const loadMeta=async()=>{ if(metaCache)return metaCache; try{metaCache=await getJSON(metaUrl);}catch(e){metaCache={};} return metaCache; };
+  const loadFields=async()=>{ if(fieldsCache)return fieldsCache; try{const m=await loadMeta();const sc=m.schemas?m.schemas.find(s=>s["schema-id"]===m["current-schema-id"]):m.schema;fieldsCache=sc.fields;}catch(e){fieldsCache=[];}return fieldsCache;};
   async function afterTab(t){
     if(t==="fields"){const f=await loadFields();document.querySelector("#ft tbody").innerHTML=(f.length?f:[]).map(x=>`<tr><td class="fn">${esc(x.name)}</td><td class="muted">${esc(typeof x.type==="object"?"struct":x.type)}</td><td>${esc(x.doc||"")}</td></tr>`).join("")||`<tr><td colspan=3 class="muted">sin esquema</td></tr>`;}
     if(t==="table"&&!tabDone){tabDone=true;try{
       const f=await loadFields();const cols=f.map(x=>x.name).filter(n=>n!=="geom");const sel=cols.length?cols.map(n=>`"${n}"`).join(","):"* EXCLUDE(geom)";
-      const rows=await q(`SELECT ${sel} FROM read_parquet('${pqUrl}') LIMIT 100`);
+      const rows=await q(`SELECT ${sel} FROM read_parquet('${previewUrl}') LIMIT 100`);
       const head=cols.length?cols:Object.keys(rows[0]||{});
       document.querySelector("#dt thead").innerHTML=`<tr>${head.map(h=>`<th>${esc(h)}</th>`).join("")}</tr>`;
       document.querySelector("#dt tbody").innerHTML=rows.map(r=>`<tr>${head.map(h=>`<td>${esc(r[h])}</td>`).join("")}</tr>`).join("")||`<tr><td class="muted">sin filas</td></tr>`;
@@ -123,14 +125,20 @@ async function detail(ds){
   document.querySelectorAll("#tabs button").forEach(b=>b.addEventListener("click",()=>show(b.dataset.t)));
   pane.addEventListener("click",ev=>{const cp=ev.target.closest(".copy");if(cp){navigator.clipboard.writeText(cp.parentElement.innerText.replace(/^copiar\n?/,""));cp.textContent="¡copiado!";setTimeout(()=>cp.textContent="copiar",1200);}});
 
-  if(!isRas){(async()=>{try{const f=await loadFields();document.getElementById("m-cols").textContent=(f.length||"—");const r=await q(`SELECT count(*) n FROM read_parquet('${pqUrl}')`);document.getElementById("m-rows").textContent=Number(r[0].n).toLocaleString("es");}catch(e){document.getElementById("m-rows").textContent="—";}})();}
+  if(!isRas){(async()=>{try{
+      const f=await loadFields();document.getElementById("m-cols").textContent=(f.length||"—");
+      let n=null;
+      if(e.partitioned){const m=await loadMeta();const s=(m.snapshots||[]).slice(-1)[0];const tr=s&&s.summary&&s.summary["total-records"];if(tr)n=Number(tr);}
+      if(n==null){const r=await q(`SELECT count(*) n FROM read_parquet('${previewUrl}')`);n=Number(r[0].n);}
+      document.getElementById("m-rows").textContent=n!=null?n.toLocaleString("es"):"—";
+    }catch(e){document.getElementById("m-rows").textContent="—";}})();}
 
   async function loadMap(){
     const map=new maplibregl.Map({container:"map",style:{version:8,sources:{c:{type:"raster",tiles:["https://a.basemaps.cartocdn.com/light_all/{z}/{x}/{y}@2x.png"],tileSize:256,attribution:"© OpenStreetMap, © CARTO"}},layers:[{id:"c",type:"raster",source:"c"}]},center:[-3.7,40.42],zoom:7});
     await new Promise(r=>map.on("load",r));
     try{
-      const gx=epsg==="4326"?"geom":`ST_Transform(geom,'EPSG:${epsg}','EPSG:4326')`;
-      const rows=await q(`SELECT ST_AsGeoJSON(${gx}) g FROM read_parquet('${pqUrl}') WHERE geom IS NOT NULL LIMIT 2000`);
+      const gx=epsg==="4326"?"geom":`ST_Transform(geom,'EPSG:${epsg}','EPSG:4326',always_xy:=true)`;
+      const rows=await q(`SELECT ST_AsGeoJSON(${gx}) g FROM read_parquet('${previewUrl}') WHERE geom IS NOT NULL LIMIT 2000`);
       const fc={type:"FeatureCollection",features:rows.map(r=>({type:"Feature",geometry:JSON.parse(r.g)}))};
       map.addSource("d",{type:"geojson",data:fc});
       map.addLayer({id:"fl",type:"fill",source:"d",filter:["==","$type","Polygon"],paint:{"fill-color":"#2d6cdf","fill-opacity":.22,"fill-outline-color":"#2d6cdf"}});
