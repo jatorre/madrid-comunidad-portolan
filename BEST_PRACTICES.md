@@ -54,6 +54,13 @@ Cada una se descubrió **midiendo fallos reales**. Saltarse cualquiera rompe la 
 | 6 | **Descripción + `field_id` por columna** (parquet `description` + Iceberg `doc`) | sin diccionario de datos (Snowflake lo muestra como comentario de columna en `DESCRIBE TABLE`) |
 | 7 | **Particionar** por una clave natural (provincia, distrito…), **un fichero por partición**, filas ordenadas espacialmente (Hilbert) | menos poda; ficheros gigantes |
 | 8 | **Bucket público** (`allUsers:objectViewer`), lectura anónima | no se puede leer sin credenciales |
+| 9 | **Nombres de columna en minúsculas** | Snowflake aborta la poda de geom (`300010`) si el esquema tiene nombres en MAYÚSCULAS |
+| 10 | **Filtrar geometrías NULL / vacías** (`WHERE geom IS NOT NULL AND NOT ST_IsEmpty(geom)`) | una sola fila sin geometría rompe la poda de geom de Snowflake (`300010`) — y no sirve para consultas espaciales |
+
+> **Convertidor genérico** (cualquier esquema): `portolan_v3.py PREFIX DATASET_ID` — detecta geom+CRS,
+> reproyecta a 4326, calcula bbox, minúsculas, filtra nulas, bounds por columna con guardas NaN/Inf,
+> y escribe v3 (geom contiguo + bbox oculto + descripciones). `portolan_v3_grind.sh PREFIX` lo recorre
+> sobre todo un catálogo (resumable).
 
 > **Encoding de bounds Iceberg por tipo:** string → UTF-8 (truncado ~60 bytes); int → 4-byte little-endian;
 > double → 8-byte little-endian; geom → `packed_xy_le` (X e Y como doubles LE, 16 bytes). Para columnas
