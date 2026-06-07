@@ -71,10 +71,12 @@ def convert(prefix, ds, descs=None):
     geomcol=[n for n,t in cols if "GEOMETRY" in t.upper()]
     if not geomcol: raise RuntimeError(f"{ds}: sin columna geometry")
     gname=geomcol[0]; gtype=[t for n,t in cols if n==gname][0]
-    m=re.search(r'EPSG:(\d+)', gtype); src_epsg=m.group(1) if m else "4326"
+    m=re.search(r'EPSG:(\d+)', gtype)
+    src_epsg=m.group(1) if m else ("4326" if "CRS84" in gtype.upper() else "4326")
     attrs=[(n,t) for n,t in cols if n!=gname]
-    # geom 4326
-    gexpr = f'"{gname}"' if src_epsg in ("4326",) or "CRS84" in gtype.upper() else f"ST_Transform(\"{gname}\",'EPSG:{src_epsg}','EPSG:4326')"
+    # CRS NATIVO: no reproyectar. geom queda en su CRS de origen (srid:src_epsg), bbox en unidades nativas.
+    geom_ext = ga.wkb().with_crs(f"srid:{src_epsg}")
+    gexpr = f'"{gname}"'
     # 2) SELECT: atributos (cast raros->VARCHAR), geom_wkb, bbox
     sel=[]
     out_cols=[]  # (name, jtype, arrow_type)
@@ -103,15 +105,15 @@ def convert(prefix, ds, descs=None):
           ("xmax",pa.float64(),DoubleType,"double"),("ymax",pa.float64(),DoubleType,"double")]
     order=[]  # (name, jtype, arrow, iceberg, is_schema)
     for (n,jt,at,it) in out_cols: order.append((n,jt,at,it,True))
-    order.append(("geom","geometry",GEOM_EXT,BinaryType,True))
+    order.append(("geom","geometry",geom_ext,BinaryType,True))
     for (n,at,it,jt) in BBOX: order.append((n,jt,at,it,False))
     cmeta=[]
     for n,jt,at,it,insch in order:
         fid+=1
-        doc=descs.get(n, f"{n}") if n!="geom" else f"Geometría (EPSG:4326, tipo Geometry nativo). {descs.get('geom','')}".strip()
+        doc=descs.get(n, f"{n}") if n!="geom" else f"Geometría (EPSG:{src_epsg}, tipo Geometry nativo). {descs.get('geom','')}".strip()
         if n=="geom":
-            arr=GEOM_EXT.wrap_array(t["__wkb"].combine_chunks())
-            fields.append(pa.field("geom",GEOM_EXT,nullable=True,metadata=fmeta(fid,doc)))
+            arr=geom_ext.wrap_array(t["__wkb"].combine_chunks())
+            fields.append(pa.field("geom",geom_ext,nullable=True,metadata=fmeta(fid,doc)))
         else:
             col=t[n].combine_chunks()
             arr=pc.cast(col,at) if col.type!=at else col
@@ -145,7 +147,7 @@ def convert(prefix, ds, descs=None):
         value_counts={k:v for k,v in vc.items() if k in keep}, null_value_counts={k:v for k,v in nv.items() if k in keep})
     ice=Schema(*[NestedField(c["fid"],c["name"],(BinaryType() if c["name"]=="geom" else c["it"]()),required=False) for c in sch])
     jf=[{"id":c["fid"],"name":c["name"],"required":False,
-         "type":("geometry" if c["name"]=="geom" else c["jt"]),"doc":c["doc"]} for c in sch]
+         "type":(f"geometry(srid:{src_epsg})" if c["name"]=="geom" else c["jt"]),"doc":c["doc"]} for c in sch]
     nm=[{"field-id":c["fid"],"names":[c["name"]]} for c in sch]
     root=WORK/f"meta_{ds}";
     import shutil; shutil.rmtree(root,ignore_errors=True); root.mkdir(parents=True)

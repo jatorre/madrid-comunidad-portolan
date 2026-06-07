@@ -32,8 +32,11 @@ gs://<bucket>/v3/<dataset>/
 
 Cada parquet contiene, **en este orden de columnas**:
 1. **Atributos** (tipados, con nombre limpio y descripción).
-2. **`geom`** — tipo lógico **`Geometry(crs=srid:4326)` nativo de Parquet** (GeoParquet 2.0, vía
-   `geoarrow.pyarrow.wkb().with_crs("srid:4326")`).
+2. **`geom`** — tipo lógico **`Geometry(crs=srid:<epsg>)` nativo de Parquet** en el **CRS NATIVO del
+   dataset** (GeoParquet 2.0, vía `geoarrow.pyarrow.wkb().with_crs("srid:<epsg>")`). **No reproyectamos:**
+   cada dataset mantiene su CRS de origen (Comunidad 25830, etc.). El `bbox` queda en **unidades nativas**
+   (metros para UTM). *(Solo se reproyecta cuando hay que UNIR varias zonas en una tabla — caso Catastro,
+   3 husos UTM → 4326.)*
 3. **`xmin, ymin, xmax, ymax`** (DOUBLE) — bounding box por fila, **al final** (después de geom).
 
 El esquema Iceberg declara **atributos + geom**, y **oculta las 4 columnas bbox** (siguen en el parquet).
@@ -47,7 +50,8 @@ Cada una se descubrió **midiendo fallos reales**. Saltarse cualquiera rompe la 
 | # | Regla | Si no… |
 |---|---|---|
 | 1 | **`geom` = tipo lógico Geometry nativo de Parquet** (no WKB binario "a pelo" ni solo GeoParquet 1.1) | Snowflake/DuckDB no lo leen como geometría sin cast |
-| 2 | **CRS del tipo Parquet = exactamente `srid:4326`** (no vacío, no `EPSG:4326`) | Snowflake: `Failed to cast variant value … to REAL` |
+| 2 | **CRS del tipo Parquet = `srid:<epsg>`** (no vacío, no `EPSG:4326`) — el del dataset | Snowflake: `Failed to cast variant value … to REAL` |
+| 2b | **Tipo Iceberg de geom = `geometry(srid:<epsg>)`** en el metadata (NO `geometry` a secas) | con `geometry` a secas Snowflake asume SRID 4326 → datos en 25830 quedan mal etiquetados y `ST_INTERSECTS` da `Incompatible SRID`. Las consultas usan el SRID del dataset: `ST_GEOMFROMWKT(wkt, <epsg>)` |
 | 3 | **`geom` con field-id CONTIGUO, sin huecos** → escribe `geom` **antes** que `bbox` | Snowflake: error interno `300010` en la poda |
 | 4 | **Manifest: `lower`/`upper` bounds + `value_counts` + `null_value_counts` en TODAS las columnas del esquema** (placeholder en columnas all-null) | Snowflake: `300010`. *El bound de geom va en encoding `packed_xy_le` (16 bytes: X LE, Y LE).* |
 | 5 | **Columnas `bbox` en el parquet pero OCULTAS del esquema Iceberg** | columnas DOUBLE extra en el esquema rompen la poda de geom de Snowflake; y DuckDB necesita el bbox en el parquet |
