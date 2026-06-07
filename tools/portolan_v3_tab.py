@@ -17,6 +17,7 @@ from testbed._static_catalog import write_static_catalog
 def convert_tab(prefix, ds):
     src=f"s3://{prefix}/data/parquet_tab/{ds}.parquet"
     gs=os.environ.get("PV3_OUT_GS", f"gs://{prefix}")
+    out_id=os.environ.get("PV3_OUT_ID", ds)   # permite renombrar la salida (colisión con dataset espacial)
     rows,err=duck(f"DESCRIBE SELECT * FROM read_parquet('{src}')")
     if not rows: raise RuntimeError(f"describe fallo {ds}: {err[-160:]}")
     cols=[(r["column_name"], r["column_type"]) for r in rows]
@@ -46,7 +47,7 @@ def convert_tab(prefix, ds):
                  schema=pa.schema(fields,metadata={b"dataset":ds.encode()}))
     finp=WORK/f"{ds}__tab.parquet"; pq.write_table(tbl,finp,compression="zstd",store_schema=True,write_statistics=True)
     raw.unlink()
-    subprocess.run(["gcloud","storage","cp",str(finp),f"{gs}/v3/{ds}/data/{ds}.parquet","-q"],capture_output=True,check=True)
+    subprocess.run(["gcloud","storage","cp",str(finp),f"{gs}/v3/{out_id}/data/{out_id}.parquet","-q"],capture_output=True,check=True)
     N=tbl.num_rows; lower={};upper={};vc={};nv={}
     for c in cmeta:
         fidc=c["fid"]; col=tbl[c["name"]]; vc[fidc]=N; nv[fidc]=int(col.null_count)
@@ -55,15 +56,15 @@ def convert_tab(prefix, ds):
         hi=enc(c["jt"],pc.max(nn).as_py()) if len(nn) else None
         if lo is None: lo,hi=ph(c["jt"])
         lower[fidc]=lo; upper[fidc]=hi
-    data=dict(path=f"data/{ds}.parquet", size=finp.stat().st_size, rows=N,
+    data=dict(path=f"data/{out_id}.parquet", size=finp.stat().st_size, rows=N,
         lower=lower, upper=upper, value_counts=vc, null_value_counts=nv)
     ice=Schema(*[NestedField(c["fid"],c["name"],c["it"](),required=False) for c in cmeta])
     jf=[{"id":c["fid"],"name":c["name"],"required":False,"type":c["jt"]} for c in cmeta]
     nm=[{"field-id":c["fid"],"names":[c["name"]]} for c in cmeta]
     root=WORK/f"metatab_{ds}"; import shutil; shutil.rmtree(root,ignore_errors=True); root.mkdir(parents=True)
     write_static_catalog(table_root=root, iceberg_schema=ice, schema_json_fields=jf, name_mapping=nm,
-        data_files=[data], format_version_in_metadata=3, location_uri=f"{gs}/v3/{ds}", meta_dir_name="metadata")
-    subprocess.run(["gcloud","storage","cp","-r",str(root/"metadata"),f"{gs}/v3/{ds}/","-q"],capture_output=True)
+        data_files=[data], format_version_in_metadata=3, location_uri=f"{gs}/v3/{out_id}", meta_dir_name="metadata")
+    subprocess.run(["gcloud","storage","cp","-r",str(root/"metadata"),f"{gs}/v3/{out_id}/","-q"],capture_output=True)
     shutil.rmtree(root,ignore_errors=True); finp.unlink()
     return N, len(cmeta)
 
