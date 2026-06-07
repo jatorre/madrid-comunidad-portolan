@@ -1,5 +1,7 @@
 # Portolan — Comunidad de Madrid (regional)
 
+🌐 **[Explorar el catálogo (visor web) →](https://storage.googleapis.com/carto-portolan-madrid/comunidad-madrid/web/index.html)**
+
 A **Portolan** spatial-data catalog for the **Comunidad de Madrid**: a git repo that is the *source* of a
 catalog and publishes itself to object storage as a **static Apache Iceberg REST catalog** (`ATTACH` from
 DuckDB / Snowflake) + **STAC** + **remote GeoParquet** + **Cloud-Optimized GeoTIFF** + a human HTML explorer —
