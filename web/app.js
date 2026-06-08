@@ -163,9 +163,9 @@ async function detail(ds){
       const p=new pmtiles.PMTiles(tilesUrl); _pmProto.add(p);
       const h=await p.getHeader();
       map.addSource("d",{type:"vector",url:`pmtiles://${tilesUrl}`});
-      map.addLayer({id:"fl",type:"fill","source-layer":tilesLayer,filter:["==","$type","Polygon"],paint:{"fill-color":"#2d6cdf","fill-opacity":.25,"fill-outline-color":"#1f4fa3"}});
-      map.addLayer({id:"ln",type:"line","source-layer":tilesLayer,filter:["==","$type","LineString"],paint:{"line-color":"#2d6cdf","line-width":1.2}});
-      map.addLayer({id:"pt",type:"circle","source-layer":tilesLayer,filter:["==","$type","Point"],paint:{"circle-radius":["interpolate",["linear"],["zoom"],6,1.2,14,3.5],"circle-color":"#2d6cdf","circle-opacity":.6}});
+      map.addLayer({id:"fl",type:"fill",source:"d","source-layer":tilesLayer,filter:["==","$type","Polygon"],paint:{"fill-color":"#2d6cdf","fill-opacity":.25,"fill-outline-color":"#1f4fa3"}});
+      map.addLayer({id:"ln",type:"line",source:"d","source-layer":tilesLayer,filter:["==","$type","LineString"],paint:{"line-color":"#2d6cdf","line-width":1.2}});
+      map.addLayer({id:"pt",type:"circle",source:"d","source-layer":tilesLayer,filter:["==","$type","Point"],paint:{"circle-radius":["interpolate",["linear"],["zoom"],6,1.2,14,3.5],"circle-color":"#2d6cdf","circle-opacity":.6}});
       // encuadre robusto: el header PMTiles puede traer bounds contaminados por coords atípicas
       // del origen (p.ej. maxLat≈85). Solo hacemos fitBounds si la caja es plausible; si no, vista por defecto.
       if(h&&isFinite(h.minLon)){const dLat=h.maxLat-h.minLat,dLon=h.maxLon-h.minLon;
