@@ -1,4 +1,8 @@
 import * as duckdb from "https://cdn.jsdelivr.net/npm/@duckdb/duckdb-wasm@1.32.0/+esm";
+import * as pmtiles from "https://cdn.jsdelivr.net/npm/pmtiles@3.2.1/+esm";
+
+let _pmProto=null;                          // protocolo pmtiles:// para MapLibre (registro perezoso)
+function pmProto(){ if(!_pmProto){ _pmProto=new pmtiles.Protocol(); maplibregl.addProtocol("pmtiles",_pmProto.tile); } return _pmProto; }
 
 const CFG = window.CATALOG;                 // {title, base, attribution}
 const app = document.getElementById("app");
@@ -73,6 +77,8 @@ async function detail(ds){
   const previewUrl=dataURL(e.preview||e.parquet||`v3/${ds}/data/${ds}.parquet`); // concreto (sin glob) para el preview en navegador
   const metaUrl=dataURL(e.meta||`v3/${ds}/metadata/v1.metadata.json`);
   const cogUrl=e.cog?dataURL(e.cog):null;
+  const tilesUrl=e.tiles?dataURL(e.tiles):null;            // PMTiles (vector tiles) si existe
+  const tilesLayer=e.tilesLayer||ds;                        // source-layer = nombre de capa tippecanoe (-l)
   const tname=ds.replace(/[^a-z0-9_]/gi,"_");
   const s3 = s3of(pqUrl);
   const duckSnip = isRas
@@ -98,13 +104,14 @@ async function detail(ds){
    <div id="pane"></div>`;
 
   const panes={
-    use:`<h2>Acceso</h2><p class="muted">Parquet: <a href="${pqUrl}">${esc(e.partitioned?"(particionado por provincia)":ds+".parquet")}</a>${cogUrl?` · COG: <a href="${cogUrl}">${esc(ds)}.tif</a>`:""}</p>
+    use:`<h2>Acceso</h2><p class="muted">Parquet: <a href="${pqUrl}">${esc(e.partitioned?"(particionado por provincia)":ds+".parquet")}</a>${cogUrl?` · COG: <a href="${cogUrl}">${esc(ds)}.tif</a>`:""}${tilesUrl?` · PMTiles: <a href="${tilesUrl}">${esc(ds)}.pmtiles</a>`:""}</p>
       <h2>DuckDB</h2><pre class="code"><button class="copy">copiar</button>${esc(duckSnip)}</pre>
-      <h2>Snowflake (Iceberg externo)</h2><pre class="code"><button class="copy">copiar</button>${esc(sfSnip)}</pre>`,
+      <h2>Snowflake (Iceberg externo)</h2><pre class="code"><button class="copy">copiar</button>${esc(sfSnip)}</pre>${tilesUrl?`
+      <h2>Vector tiles (PMTiles · MapLibre)</h2><pre class="code"><button class="copy">copiar</button>${esc(`import { Protocol } from "pmtiles";\nlet p = new Protocol(); maplibregl.addProtocol("pmtiles", p.tile);\nmap.addSource("${tilesLayer}", { type:"vector", url:"pmtiles://${tilesUrl}" });\nmap.addLayer({ id:"${tilesLayer}", type:"fill", source:"${tilesLayer}",\n  "source-layer":"${tilesLayer}", paint:{ "fill-color":"#2d6cdf", "fill-opacity":0.3 } });`)}</pre>`:""}`,
     fields:`<h2>Campos</h2><div class="data-table-wrap"><table class="data fields" id="ft"><thead><tr><th>columna</th><th>tipo</th><th>descripción</th></tr></thead><tbody><tr><td colspan=3 class="muted">cargando…</td></tr></tbody></table></div>`,
     table:`<div class="data-table-wrap"><table class="data" id="dt"><thead></thead><tbody><tr><td class="muted"><span class="spin"></span> consultando parquet en el navegador…</td></tr></tbody></table></div><p class="count-note">Primeras 100 filas (DuckDB-WASM).${e.partitioned?" Muestra de una partición (provincia).":""}</p>`,
     map: isRas?`<p class="muted">Ráster COG: ábrelo en QGIS o un visor COG: <a href="${cogUrl}">${esc(ds)}.tif</a></p>`
-      :`<div id="map"></div><p class="count-note">Hasta 2.000 geometrías de muestra${epsg!=="4326"?", reproyectadas a 4326":""}${e.partitioned?" · de una sola provincia (preview)":""}.</p>`
+      :`<div id="map"></div><p class="count-note">${tilesUrl?"Vector tiles (PMTiles) — dataset completo, servido por <i>range requests</i>.":`Hasta 2.000 geometrías de muestra${epsg!=="4326"?", reproyectadas a 4326":""}${e.partitioned?" · de una sola provincia (preview)":""}.`}</p>`
   };
   const pane=document.getElementById("pane");
   let mapDone=false, tabDone=false, fieldsCache=null, metaCache=null;
@@ -134,8 +141,9 @@ async function detail(ds){
     }catch(e){document.getElementById("m-rows").textContent="—";}})();}
 
   async function loadMap(){
-    const map=new maplibregl.Map({container:"map",style:{version:8,sources:{c:{type:"raster",tiles:["https://a.basemaps.cartocdn.com/light_all/{z}/{x}/{y}@2x.png"],tileSize:256,attribution:"© OpenStreetMap, © CARTO"}},layers:[{id:"c",type:"raster",source:"c"}]},center:[-3.7,40.42],zoom:7});
+    const map=new maplibregl.Map({container:"map",style:{version:8,sources:{c:{type:"raster",tiles:["https://a.basemaps.cartocdn.com/light_all/{z}/{x}/{y}@2x.png"],tileSize:256,attribution:"© OpenStreetMap, © CARTO"}},layers:[{id:"c",type:"raster",source:"c"}]},center:[-3.7,40.42],zoom:5});
     await new Promise(r=>map.on("load",r));
+    if(tilesUrl){ return loadMapTiles(map); }
     try{
       const gx=epsg==="4326"?"geom":`ST_Transform(geom,'EPSG:${epsg}','EPSG:4326',always_xy:=true)`;
       const rows=await q(`SELECT ST_AsGeoJSON(${gx}) g FROM read_parquet('${previewUrl}') WHERE geom IS NOT NULL LIMIT 2000`);
@@ -148,6 +156,22 @@ async function detail(ds){
       fc.features.forEach(f=>{const co=f.geometry&&f.geometry.coordinates;if(co)try{flat(co);}catch(e){}});
       if(!b.isEmpty())map.fitBounds(b,{padding:30,maxZoom:14,duration:0});
     }catch(err){document.getElementById("map").insertAdjacentHTML("beforeend",`<div style="padding:14px" class="muted">No se pudo cargar la geometría (${esc(err.message||err)}). EPSG:${epsg}.</div>`);}
+  }
+  async function loadMapTiles(map){
+    try{
+      pmProto();
+      const p=new pmtiles.PMTiles(tilesUrl); _pmProto.add(p);
+      const h=await p.getHeader();
+      map.addSource("d",{type:"vector",url:`pmtiles://${tilesUrl}`});
+      map.addLayer({id:"fl",type:"fill","source-layer":tilesLayer,filter:["==","$type","Polygon"],paint:{"fill-color":"#2d6cdf","fill-opacity":.25,"fill-outline-color":"#1f4fa3"}});
+      map.addLayer({id:"ln",type:"line","source-layer":tilesLayer,filter:["==","$type","LineString"],paint:{"line-color":"#2d6cdf","line-width":1.2}});
+      map.addLayer({id:"pt",type:"circle","source-layer":tilesLayer,filter:["==","$type","Point"],paint:{"circle-radius":["interpolate",["linear"],["zoom"],6,1.2,14,3.5],"circle-color":"#2d6cdf","circle-opacity":.6}});
+      // encuadre robusto: el header PMTiles puede traer bounds contaminados por coords atípicas
+      // del origen (p.ej. maxLat≈85). Solo hacemos fitBounds si la caja es plausible; si no, vista por defecto.
+      if(h&&isFinite(h.minLon)){const dLat=h.maxLat-h.minLat,dLon=h.maxLon-h.minLon;
+        if(dLat>0&&dLat<25&&dLon>0&&dLon<40&&!(h.minLon===0&&h.maxLon===0))
+          map.fitBounds([[h.minLon,h.minLat],[h.maxLon,h.maxLat]],{padding:24,duration:0,maxZoom:13});}
+    }catch(err){document.getElementById("map").insertAdjacentHTML("beforeend",`<div style="padding:14px" class="muted">No se pudieron cargar los vector tiles (${esc(err.message||err)}).</div>`);}
   }
   show(isVec?"map":isRas?"use":"table");
 }
